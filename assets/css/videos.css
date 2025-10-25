@@ -47,3 +47,37 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+#sort-controls {
+    margin-left: 32px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sort-controls label {
+    font-weight: 600;
+}
+
+#sort-controls select {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#sort-controls select:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+#sort-controls select:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.3); /* subtle highlight */
+}

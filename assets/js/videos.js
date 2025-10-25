@@ -23,16 +23,16 @@ const videos = [
   { id: "GVK1wzaKkzE", title: "I tried blender", author: "Jacane_U", type: "video" },
   { id: "oZ-AZFJzjrQ", title: "Mii Network V 2 Direct", author: "Jacane_U", type: "video" },
   { id: "VUk1O041Se8", title: "Mii Merchandise", author: "Zorrpu", type: "video" },
-  { id: "Hk3IKv0v3bU", title: "mii lost media", author: "zorrpu", type: "video" },
-  { id: "L40iWBNpcjk", title: "the Mii iceberg", author: "zorrpu", type: "video" },
-  { id: "5WZ0NBexHro", title: "Nintendo's secret mii document", author: "zorrpu", type: "video" },
-  { id: "sHZK4wH4vRc", title: "Miis on the Switch 2", author: "zorrpu", type: "video" },
-  { id: "Rq5iHQa9RXE", title: "unreproducible miis", author: "zorrpu", type: "video" },
-  { id: "JgmfkErBORA", title: "Mii", author: "zorrpu", type: "video" },
+  { id: "Hk3IKv0v3bU", title: "mii lost media", author: "Zorrpu", type: "video" },
+  { id: "L40iWBNpcjk", title: "the Mii iceberg", author: "Zorrpu", type: "video" },
+  { id: "5WZ0NBexHro", title: "Nintendo's secret mii document", author: "Zorrpu", type: "video" },
+  { id: "sHZK4wH4vRc", title: "Miis on the Switch 2", author: "Zorrpu", type: "video" },
+  { id: "Rq5iHQa9RXE", title: "unreproducible miis", author: "Zorrpu", type: "video" },
+  { id: "JgmfkErBORA", title: "Mii", author: "Zorrpu", type: "video" },
   { id: "Tuj4kUtIeM4", title: "Welcome to my channel!", author: "RFguy", type: "video" },
   { id: "kOy8CwgdBTc", title: "Mii Creator Dev build!", author: "RFguy", type: "video" },
   { id: "grS0eTELOeM", title: "How to make RFGuy's mii", author: "RFguy", type: "video" },
-  { id: "9‑xZ_4_UTtY", title: "Another Mii Maker", author: "RFguy", type: "video" },
+  { id: "9-xZ_4_UTtY", title: "Another Mii Maker", author: "RFguy", type: "video" },
   { id: "m1uhlSHfnrw", title: "Mii creator's update facts!", author: "RFguy", type: "video" },
   { id: "tumX179z044", title: "Hellyeha", author: "Mertcanius", type: "video" },
   { id: "4HZLGjpUxOE", title: "cloud", author: "Mertcanius", type: "video" },
@@ -53,6 +53,55 @@ function getVideoThumbnail(video) {
     return video.thumbnail;
   }
   return `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+}
+
+// --- Dev mode toggle ---
+const devMode = false; // set to false in production
+
+// --- Recommended order (1-based indices) ---
+const recommendedVideos = [1, 8, 24, 17, 7, 15, 43, 27, 25, 34, 29, 20, 9, 13, 4, 23, 11];
+
+// --- Sorting variables ---
+let currentSort = "recommended";
+let reverseOrder = false;
+
+// --- Helper for sorted videos ---
+function getSortedVideos() {
+    let sorted = [...videos];
+
+    switch (currentSort) {
+        case "recommended":
+            const recommended = [];
+            const remaining = [];
+
+            sorted.forEach((video, index) => {
+                if (recommendedVideos.includes(index + 1)) {
+                    recommended[recommendedVideos.indexOf(index + 1)] = video;
+                } else {
+                    remaining.push(video);
+                }
+            });
+
+            sorted = recommended.filter(v => v).concat(remaining);
+            if (reverseOrder) sorted.reverse();
+            break;
+
+        case "date":
+            if (reverseOrder) sorted.reverse();
+            break;
+
+        case "alphabetical":
+            sorted.sort((a, b) => a.title.localeCompare(b.title));
+            if (reverseOrder) sorted.reverse();
+            break;
+
+        case "creator":
+            sorted.sort((a, b) => a.author.localeCompare(b.author));
+            if (reverseOrder) sorted.reverse();
+            break;
+    }
+
+    return sorted;
 }
 
 function createVideoBox(video) {
@@ -83,7 +132,14 @@ function createVideoBox(video) {
 
     const authorDiv = document.createElement("div");
     authorDiv.className = "video-author";
-    authorDiv.textContent = `by ${video.author}`;
+
+    if (devMode) {
+        // Find original index in the videos array (1-based)
+        const originalIndex = videos.indexOf(video) + 1;
+        authorDiv.textContent = `by ${video.author} | ${originalIndex}`;
+    } else {
+        authorDiv.textContent = `by ${video.author}`;
+    }
 
     box.appendChild(titleDiv);
     box.appendChild(authorDiv);
@@ -91,18 +147,32 @@ function createVideoBox(video) {
     return box;
 }
 
+
+// --- Render videos ---
 function renderVideos() {
     const container = document.getElementById("videos");
-    if (!container) {
-        console.error("No container with id 'videos' found.");
-        return;
-    }
+    if (!container) return console.error("No container with id 'videos' found.");
 
-    videos.forEach(video => {
-        const videoBox = createVideoBox(video);
-        container.appendChild(videoBox);
+    container.innerHTML = "";
+    getSortedVideos().forEach((video, index) => {
+        container.appendChild(createVideoBox(video, index));
     });
 }
 
-// render videos once DOM is ready
-document.addEventListener("DOMContentLoaded", renderVideos);
+// --- Event listeners for dropdowns ---
+document.addEventListener("DOMContentLoaded", () => {
+    const sortTypeSelect = document.getElementById("sort-type");
+    const sortOrderSelect = document.getElementById("sort-order");
+
+    sortTypeSelect.addEventListener("change", () => {
+        currentSort = sortTypeSelect.value;
+        renderVideos();
+    });
+
+    sortOrderSelect.addEventListener("change", () => {
+        reverseOrder = sortOrderSelect.value === "reverse";
+        renderVideos();
+    });
+
+    renderVideos(); // initial render
+});
