@@ -1,0 +1,42 @@
+/* general */
+
+body {
+    background-image: url("/assets/img/miiversebackground.png");
+    background-repeat: repeat;
+    background-position: 0% 0%;
+    animation: drift 60s linear infinite; /* speed + direction */
+}
+
+@keyframes drift {
+    0%   { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+main {
+    backdrop-filter: blur(2px);
+}
+
+/* fallback font */
+body * {
+    font-family: sans-serif;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+.secretQRcode {
+width: fill;
+max-width: 750px;
+}
+
+.secretQRcode {
+width: fill;
+max-width: 750px;
+
+}

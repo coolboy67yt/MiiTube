@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MiiTube | Users</title>
+
+        <script src="/assets/js/navbar.js" defer></script>
+        <script src="/assets/js/profiles.js" defer></script>
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/profiles.css">
+    </head>
+    <body>
+        <main>
+            <div class="title">
+                <img src="/assets/img/icons/miitubers.png" height="47px">
+                <h2>MiiTubers List</h2>
+            </div>
+
+            <!-- Users are no longer stored in the HTML. To change users, please edit `/assets/js/profiles.js` -->
+            <div class="profile-list" id="profileList"></div>
+        </main>
+
+    <!--
+        For anyone snooping around in Devtools:
+        GET OUUUUUUUUTTTTT!!!! My secrets will be revealed! Please..? :D
+            - your friendly neighborhood turtledevv
+    -->
+
+    <script>
+        // Added a little secret of my own. Yes, I'm a fan of the
+        // Neil Cicierega mashups.     - turtledevv
+        const SECRET_URL = '/secret/yahoo.html';
+        const SECRET_SEQ = 'yahoo'; // what you have to type to activate the secret
+        let buffer = '';
+
+        document.addEventListener('keydown', function(e) {
+            const el = document.activeElement;
+            if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+            const k = e.key;
+            if (!k || k.length !== 1) return; // ignore non-character keys
+
+            buffer += k.toLowerCase();
+            if (buffer.length > SECRET_SEQ.length) buffer = buffer.slice(-SECRET_SEQ.length);
+
+            if (buffer === SECRET_SEQ) {
+                window.location.href = SECRET_URL; // redirect
+            }
+        });
+    </script>
+</body>
+</html>

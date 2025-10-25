@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiiTube | Manual</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/manual.css">
+</head>
+<body class="viewer">
+  <div id="content"></div>
+  <img id="return-btn" src="/assets/img/ui/black-return.png" alt="Return">
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const page = params.get("page") || "1";
+    const filePath = `page/${encodeURIComponent(page)}.html`;
+
+    fetch(filePath)
+      .then(res => {
+        if (!res.ok) throw new Error(`Page not found: ${filePath}`);
+        return res.text();
+      })
+      .then(html => {
+        document.getElementById("content").innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById("content").textContent = err.message;
+      });
+
+    document.getElementById("return-btn").addEventListener("click", () => {
+      history.back();
+    });
+  </script>
+</body>
+</html>

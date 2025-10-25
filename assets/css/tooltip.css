@@ -1,0 +1,60 @@
+:root{
+    /* config, change to whatever looks nice */
+    --tooltip-bg: #222;
+    --tooltip-color: #fff;
+    --tooltip-padding: 8px 12px;
+    --tooltip-radius: 8px;
+    --tooltip-delay: 150ms;
+    --tooltip-offset: 10px;
+    --arrow-size: 7px;
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* tooltip bubble */
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + var(--tooltip-offset));
+    left: 50%;
+    transform: translateX(-50%) scale(0.97);
+    background: var(--tooltip-bg);
+    color: var(--tooltip-color);
+    padding: var(--tooltip-padding);
+    border-radius: var(--tooltip-radius);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--tooltip-delay) ease, transform var(--tooltip-delay) ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 20;
+}
+
+/* tooltip arrow */
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + var(--tooltip-offset) - calc(var(--arrow-size) - 1px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: var(--arrow-size) solid transparent;
+    border-right: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid var(--tooltip-bg); /* arrow points up */
+    opacity: 0;
+    transition: opacity var(--tooltip-delay) ease;
+    z-index: 19;
+}
+
+.tooltip:hover::after, .tooltip:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* keep centered on smaller elements */
+.tooltip[data-tooltip][aria-hidden="false"]::after { pointer-events: auto; }

@@ -1,0 +1,46 @@
+@import url("tooltip.css");
+
+.logo {
+    margin-right: 10px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.navbar * span {
+    background: linear-gradient(to bottom, #e3e3e3, #eeeeee);
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.navbar * span img, .navbar-right * {
+    width: auto;
+    height: 40px;
+}
+
+.navbar {
+    background-color: rgba(240, 255, 255, 0.742);
+    border-bottom: 1px solid rgb(0, 255, 55);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
