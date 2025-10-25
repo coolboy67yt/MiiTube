@@ -16,6 +16,12 @@
 
 .video-title {
     margin-top: 10px;
+    padding: 3px;
+}
+
+.playlist-text {
+    font-size: x-small;
+    color: rgb(65, 65, 65);
 }
 
 .video-author {
@@ -33,7 +39,7 @@
   display: block;
 }
 
-.videos {
+#videos {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
