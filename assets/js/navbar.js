@@ -1,33 +1,80 @@
-// navbar.js — now with STYLE (chaos included)
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // 1️⃣ Inject CSS like a sneaky wizard
+    // inject css
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "/assets/css/navbar.css";
     document.head.appendChild(link);
 
-    // 2️⃣ Create the container for the navbar
+    // create navbar container
     const navbarContainer = document.createElement("div");
     navbarContainer.classList.add("navbar");
 
-    // 3️⃣ Push it to the top of <body>
+    // push to top
     document.body.prepend(navbarContainer);
 
-    // 4️⃣ Fetch the navbar HTML
+    // get navbar html
     const res = await fetch("/assets/navbar.html");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const html = await res.text();
 
-    // 5️⃣ Inject HTML
+    // inject
     navbarContainer.innerHTML = html;
 
-    // 6️⃣ Highlight current link
-    const current = location.pathname.replace(/\/+$/, "");
-    navbarContainer.querySelectorAll("a").forEach(a => {
-      const href = a.getAttribute("href").replace(/\/+$/, "");
-      if (href === current) a.classList.add("active");
+    // get the logo
+    const logo = navbarContainer.querySelector(".logo");
+
+    function checkNavbar() {
+        const tolerance = 1; // pixels of wiggle room
+        const logoHidden = 480 - navbarContainer.clientWidth > tolerance;
+        const logo = navbarContainer.querySelector(".logo");
+        const navbarLeft = navbarContainer.querySelector(".navbar-left");
+        const navbarRight = navbarContainer.querySelector(".navbar-right");
+
+        if (logoHidden) {
+            logo?.classList.add("hidden");
+
+            // Move right children to left
+            Array.from(navbarRight.children).forEach(child => {
+                if (!navbarLeft.contains(child)) {
+                    navbarLeft.appendChild(child);
+                }
+            });
+
+            // Center all children
+            navbarLeft.style.justifyContent = "center";
+            navbarLeft.style.width = "100%"; // take up full navbar width
+            navbarLeft.style.gap = "10px";   // optional spacing
+
+        } else {
+            logo?.classList.remove("hidden");
+
+            // Move right children back
+            Array.from(navbarLeft.children).forEach(child => {
+                if (!child.classList.contains("always-left")) {
+                    navbarRight.appendChild(child);
+                }
+            });
+
+            // Restore original layout
+            navbarLeft.style.justifyContent = "flex-start";
+            navbarLeft.style.width = ""; // reset to original
+            navbarLeft.style.gap = "0";  // reset gap
+        }
+    }
+
+
+    // check on resize and load if navbar is too wide
+    checkNavbar();
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        checkNavbar(); // only runs once 50ms after resizing stops
+    }, 50);
     });
+
+
   } catch (err) {
     console.error("Navbar failed to load:", err);
   }
