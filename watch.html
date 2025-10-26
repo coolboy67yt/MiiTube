@@ -7,45 +7,29 @@
       <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
       <script src="/assets/js/navbar.js" defer></script>
-      <script src="/assets/js/loader.js" defer></script>
 
       <!-- CSS imports -->
       <link rel="stylesheet" href="/assets/css/main.css">
-      <link rel="stylesheet" href="/assets/css/videos.css">
+      <link rel="stylesheet" href="/assets/css/viewer.css">
   </head>
   <body>
-      <div id="loading-screen">
-          <img class="spinner" src="/assets/img/ui/loading.png">
-      </div>
-
       <main>
-        <!-- title -->
-        <div class="title"><img src="/assets/img/icons/tvii.png" height="47px" style="border-radius: 15px;"> <h2>Videos</h2></div> 
-
-        <div id="sort-controls" style="margin-bottom: 16px;">
-          <label for="sort-type">Sort by:</label>
-          <select id="sort-type">
-            <option value="recommended">Recommended</option>
-            <option value="date">Date added</option>
-            <option value="alphabetical">Alphabetically</option>
-            <option value="creator">By creator</option>
-          </select>
-
-          <label for="sort-order" style="margin-left: 16px;">Order:</label>
-          <select id="sort-order">
-            <option value="normal">Normal</option>
-            <option value="reverse">Reverse</option>
-          </select>
+        <div id="video-player">
+            <iframe id="video-embed" width="560" height="315" src="/assets/loading.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="video-info">
+                <img id="pfp" src="">
+                <div id="texts">
+                    <span id="title">Loading video information..</span><br>
+                    <span id="author">plz wait</span>
+                </div>
+                <!--<div id="actions">
+                    <button id="report">A</button>
+                    <button id="like">E</button>
+                </div>-->
+            </div>
         </div>
-
-        <div id="videos"></div>
-
-
-
-        <!-- Just like profiles, videos have moved. Edit videos in /assets/js/videos.js -->
-        <div id="videos"></div>
       </main>
 
-      <script src="/assets/js/videos.js"></script>
+      <script type="module" src="/assets/js/viewer.js"></script>
   </body>
 </html>

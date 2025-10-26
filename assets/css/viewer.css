@@ -1,0 +1,47 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#video-player {
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #50787b, #fff, #ebebeb, #b4e1e1);
+    width: fit-content;
+    height: fit-content;
+    margin-top: 80px;
+    border: 3px solid #50787b;
+}
+
+#video-player iframe {
+    border-radius: 20px;
+}
+
+#video-info {
+    padding: 10px;
+    padding-left: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#pfp {
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    border: 2px solid black;
+}
+
+#title {
+    color: black;
+    font-size: large;
+}
+
+#author {
+    color: rgb(63, 63, 63);
+    font-size: small;
+}
+
+#actions button span {
+    font-family: 'Miiverse Symbols'
+}
