@@ -22,32 +22,33 @@
             <div class="profile-list" id="profileList"></div>
         </main>
 
-    <!--
-        For anyone snooping around in Devtools:
-        GET OUUUUUUUUTTTTT!!!! My secrets will be revealed! Please..? :D
-            - your friendly neighborhood turtledevv
-    -->
+        <!--
+            For anyone snooping around in Devtools:
+            GET OUUUUUUUUTTTTT!!!! My secrets will be revealed! Please..? :D
+                - your friendly neighborhood turtledevv
+        -->
 
-    <script>
-        // Added a little secret of my own. Yes, I'm a fan of the
-        // Neil Cicierega mashups.     - turtledevv
-        const SECRET_URL = '/secret/yahoo.html';
-        const SECRET_SEQ = 'yahoo'; // what you have to type to activate the secret
-        let buffer = '';
+        <script>
+            // Added a little secret of my own. Yes, I'm a fan of the
+            // Neil Cicierega mashups.     - turtledevv
+            const SECRET_URL = '/secret/yahoo.html';
+            const SECRET_SEQ = 'yahoo'; // what you have to type to activate the secret
+            let buffer = '';
 
-        document.addEventListener('keydown', function(e) {
-            const el = document.activeElement;
-            if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
-            const k = e.key;
-            if (!k || k.length !== 1) return; // ignore non-character keys
+            document.addEventListener('keydown', function(e) {
+                const el = document.activeElement;
+                if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+                const k = e.key;
+                if (!k || k.length !== 1) return; // ignore non-character keys
 
-            buffer += k.toLowerCase();
-            if (buffer.length > SECRET_SEQ.length) buffer = buffer.slice(-SECRET_SEQ.length);
+                buffer += k.toLowerCase();
+                if (buffer.length > SECRET_SEQ.length) buffer = buffer.slice(-SECRET_SEQ.length);
 
-            if (buffer === SECRET_SEQ) {
-                window.location.href = SECRET_URL; // redirect
-            }
-        });
-    </script>
-</body>
+                if (buffer === SECRET_SEQ) {
+                    window.location.href = SECRET_URL; // redirect
+                }
+            });
+        </script>
+        <script type="module" src="/assets/js/main.js"></script>
+    </body>
 </html>
