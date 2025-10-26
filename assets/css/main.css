@@ -1,4 +1,6 @@
 /* general */
+@import url("tooltip.css");
+
 @font-face {
   font-family: "Miiverse Symbols";
   src: url("/assets/font/MiiverseSymbols-Regular.woff") format("woff");

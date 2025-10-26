@@ -11,21 +11,27 @@
       <!-- CSS imports -->
       <link rel="stylesheet" href="/assets/css/main.css">
       <link rel="stylesheet" href="/assets/css/viewer.css">
+      <link rel="stylesheet" href="/assets/css/miibtn.css">
   </head>
   <body>
       <main>
         <div id="video-player">
             <iframe id="video-embed" width="560" height="315" src="/assets/loading.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div id="video-info">
-                <img id="pfp" src="">
-                <div id="texts">
-                    <span id="title">Loading video information..</span><br>
-                    <span id="author">plz wait</span>
+                <div id="maininfo">
+                    <img id="pfp" src="">
+                    <div id="texts">
+                        <span id="title">Loading video information..</span><br>
+                        <span id="author">plz wait</span>
+                    </div>
                 </div>
-                <!--<div id="actions">
-                    <button id="report">A</button>
-                    <button id="like">E</button>
-                </div>-->
+                <div id="actions">
+                    <!--
+                    <button id="like" class="miiverse-btn green tooltip" onclick="alert('Yeah!')" data-tooltip="Yeah!"><span>E</span> Yeah!</button>
+                    <button id="dislike" class="miiverse-btn red tooltip" onclick="alert('Yeah!')" data-tooltip="Nah.."><span>1</span></button>
+                    <button id="report" class="miiverse-btn yellow tooltip" onclick="alert('Yeah!')" data-tooltip="Report" style="margin-left: 2px; background: url('/assets/img/icons/health_and_safety.png'); background-size: 90%; background-position: center;"><span>S</span></button>
+                    -->
+                </div>
             </div>
         </div>
       </main>

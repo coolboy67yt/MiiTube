@@ -12,6 +12,12 @@ main {
     border: 3px solid #50787b;
 }
 
+#maininfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #video-player iframe {
     border-radius: 20px;
 }
@@ -23,6 +29,7 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
 }
 
 #pfp {
@@ -40,6 +47,10 @@ main {
 #author {
     color: rgb(63, 63, 63);
     font-size: small;
+}
+
+#actions {
+    margin-right: 5px;
 }
 
 #actions button span {
