@@ -67,5 +67,19 @@ export const videos = [
   { id: "Rn_FkM6stfA", title: "test", author: "Mertcanius", type: "video" },
   { id: "D1yUWQgOgyY", title: "test_02", author: "Mertcanius", type: "video" },
   { id: "TV0KhuN-vX8", title: "test_03", author: "Mertcanius", type: "video" },
-  { id: "saMpgWW5XBQ", title: "How One Bug RUINED Our Game...", author: "RayaGamedev", type: "video" }
+  { id: "saMpgWW5XBQ", title: "How One Bug RUINED Our Game...", author: "RayaGamedev", type: "video" },
+  { id: "g4ImXuCiQgE", title: "The Adventure Begins!|EP 1", author: "FailTopiaSUPERCUT", type: "video"},
+  { id: "F9_MHbdaCXM", title: "The Party Assembles!|EP 2", author: "FailTopiaSUPERCUT", type: "video"},
+  { id: "FF2cvKMrhK0", title: "The RPS Episode|EP 3", author: "FailTopiaSUPERCUT", type: "video"},
+  { id: "1d4GlXBYL9I", title: "FOR GREENHORNE CASTLE!|EP 4", author: "FailTopiaSUPERCUT", type: "video"},
+  { id: "yxd04rkspeg", title: "The History of Wuhu Island", author: "NintendoHero", type: "video"},
+  { id: "MHZXDnllW1Y", title: "Ranking Wii Fit Activities", author: "NintendoHero", type: "video"},
+  { id: "xzBHVtfM7SU", title: "Ranking Wii Sports Sports", author: "NintendoHero", type: "video"},
+  { id: "GlZJ-ao-9G0", title: "Imagining A Switch Sports Resort", author: "NintendoHero", type: "video"},
+  { id: "8fXtEPDfNTM", title: "Imagining A Tomodachi Life 2", author: "NintendoHero", type: "video"},
+  { id: "0E6MjK_F8-8", title: "The most magical era of nintendo", author: "NintendoHero", type: "video"},
+  { id: "PLeUND1-8xOQ2QcaQUYcS-n6qTZ404t1bh", title: "The Miitopia Show", author: "Kobazco", type: "playlist", thumbnail: "https://img.youtube.com/vi/ZRKFzIyC8i8/hqdefault.jpg"},
+  { id: "8uv7uIiD6cs", title: "Find Miitopia - Perilous Prairie Showcase", author: "Kobazco", type: "video"},
+  { id: "IQWhKhyf6Lg", title: "Midwest Speedfest 2024 - Find Mii II Both Quests", author: "Kobazco", type: "video"},
+  { id: "4HP70fjuCFY", title: "Slot Car Rivals All Courses", author: "Kobazco", type: "video"}
 ];

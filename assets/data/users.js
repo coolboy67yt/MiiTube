@@ -42,6 +42,13 @@ export const users = [
         description: 'Check out my website for archives, Mii art and more! I love creating stuff, whatever it may be. Check out my website <a href="https://zorrpu.com">zorrpu.com</a>'
     },
     {
+        name: "Nintendo Hero",
+        username: "@NintendoHero",
+        youtube: "https://www.youtube.com/@NintendoHero",
+        profilePic: "/assets/img/users/NintendoHero.jpg",
+        description: 'Video game vibes appreciator who thinks about Nintendo too much'
+    },
+    {
         name: "RFGuy",
         username: "@rfguy1",
         youtube: "https://www.youtube.com/@rfguy1",
@@ -61,6 +68,20 @@ export const users = [
         youtube: "https://www.youtube.com/@RayaGamedev",
         profilePic: "/assets/img/users/RayaGamedev.jpg",
         description: "I'm a miituber who likes to make video games and then make videos on those games!"
+    },
+    {
+        name: "FailTopia SUPERCUT",
+        username: "@FailTopiaSUPERCUT",
+        youtube: "https://www.youtube.com/@FailTopiaSUPERCUT",
+        profilePic: "/assets/img/users/FailTopiaSUPERCUT.jpg",
+        description: "Failtopia SUPERCUT is a project aiming to edit the entirety of Failboat's Miitopia playthroughs into 20~ minute episodes, starting with the very first stream from 2018."
+    },
+    {
+        name: "Kobazco",
+        username: "@Kobazco",
+        youtube: "https://www.youtube.com/@Kobazco",
+        profilePic: "/assets/img/users/Kobazco.jpg",
+        description: "Host of the Miitopia show, and the place for custom Miitopia content!"
     },
     {
         name: "Jhon Doe",

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setVideo(embedLink, videoTitle, videoAuthor, authorPFP);
     } else {
         console.log("type is playlist, redirecting to youtube")
-        window.location.assign(`https://www.youtube.com/playlist?list=PLGpTUSDBaNFQtbm78RgbNQvU2mIG_5ttC`)
+        window.location.assign(`https://www.youtube.com/playlist?list=${video.id}`)
     }
 
 });
