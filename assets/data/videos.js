@@ -81,5 +81,6 @@ export const videos = [
   { id: "PLeUND1-8xOQ2QcaQUYcS-n6qTZ404t1bh", title: "The Miitopia Show", author: "Kobazco", type: "playlist", thumbnail: "https://img.youtube.com/vi/ZRKFzIyC8i8/hqdefault.jpg"},
   { id: "8uv7uIiD6cs", title: "Find Miitopia - Perilous Prairie Showcase", author: "Kobazco", type: "video"},
   { id: "IQWhKhyf6Lg", title: "Midwest Speedfest 2024 - Find Mii II Both Quests", author: "Kobazco", type: "video"},
-  { id: "4HP70fjuCFY", title: "Slot Car Rivals All Courses", author: "Kobazco", type: "video"}
+  { id: "4HP70fjuCFY", title: "Slot Car Rivals All Courses", author: "Kobazco", type: "video"},
+  { id: "_7csJLBcj88", title: "How to turn your phone into a Wii U phone pt.2", author: "JacaneU", type: "video"},
 ];
