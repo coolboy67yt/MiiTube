@@ -9,7 +9,7 @@ export const users = [
     {
         name: "Turtledevv",
         username: "@trtldev",
-        youtube: "https://www.youtube.com/@trtldev",
+        youtube: "https://www.turtledev.xyz",
         profilePic: "/assets/img/users/Turtledevv.jpg",
         description: "I like developing stupid stuff in HTML, CSS, JS, Svelte, Python, you get it. I also like (pre-2020) Nintendo. I also worked on the frontend of this site!"
     },
