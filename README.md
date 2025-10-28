@@ -10,5 +10,5 @@ to Miis, the Wii, Wii U, 3DS, and more.<br><br>
 
 > Visit the page now! > [link](https://miitube.vercel.app)
 <br>
-Credits are in page 8 of the Manual (/manual/view.html?page=8).
+Credits are in page 8 of the Manual ([/manual/view.html?page=8](https://miitube.vercel.app/manual/view.html?page=8)).
 
