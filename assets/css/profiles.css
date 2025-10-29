@@ -1,4 +1,4 @@
-/* Centered title with subtle green glow */
+/*note to self: redo this later :}*/
 .title {
     display: flex;
     align-items: center;
@@ -10,26 +10,25 @@
 .title h2 {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    color: #585858; /* muted green */
+    color: #585858;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
-/* Profile list using CSS Grid */
+
 .profile-list { 
     display: grid; 
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px; 
     max-width: 840px; 
     margin: auto; 
     padding-bottom: 50px;
 }
 
-/* Glossy futuristic cards with subtle green */
 .profile-card { 
     display: flex; 
     gap: 18px; 
-    background: linear-gradient(145deg, #eef6f0, #d8ead8); /* soft greenish gradient */
+    background: linear-gradient(145deg, #eef6f0, #d8ead8);
     padding: 18px; 
     border-radius: 16px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 12px rgba(42,127,85,0.08) inset;
@@ -43,7 +42,6 @@
     background: linear-gradient(145deg, #e6f3e8, #cce5cc);
 }
 
-/* Profile pictures with subtle green highlight */
 .profile-card img { 
     width: 70px; 
     height: 70px; 
@@ -59,19 +57,18 @@
     box-shadow: 0 4px 12px rgba(42,127,85,0.25);
 }
 
-/* Profile info styling */
 .profile-info { flex: 1; }
 
 .profile-info a { 
     font-weight: 700; 
     text-decoration: none; 
-    color: #1f5f3b; /* darker muted green */
+    color: #1f5f3b;
     font-size: 1.05em;
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 .profile-info a:hover {
-    color: #38b66c; /* soft accent green on hover */
+    color: #38b66c;
     text-shadow: 0 0 6px #38b66c40;
 }
 
@@ -89,7 +86,6 @@
     line-height: 1.4em;
 }
 
-/* Responsive: 1 card per row on small screens */
 @media (max-width: 600px) {
     .profile-list {
         grid-template-columns: 1fr;

@@ -5,7 +5,7 @@
 }
 
 .logo.hidden {
-    display: none; /* instantly disappears when navbar overflows */
+    display: none; /* disappears when navbar overflows */
 }
 
 .navbar-left {

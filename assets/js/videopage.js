@@ -7,17 +7,14 @@ function getVideoThumbnail(video) {
   return `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
 }
 
-// --- Dev mode toggle ---
-const devMode = false; // set to false in production
+// for figurin out vid IDs and stuff
+const devMode = false;
 
-// --- Recommended order (1-based indices) ---
 const recommendedVideos = [1, 8, 24, 17, 7, 15, 43, 27, 25, 34, 29, 20, 9, 13, 4, 23, 11];
 
-// --- Sorting variables ---
 let currentSort = "recommended";
 let reverseOrder = false;
 
-// --- Helper for sorted videos ---
 function getSortedVideos() {
     let sorted = [...videos];
 
@@ -100,7 +97,7 @@ function createVideoBox(video) {
 }
 
 
-// --- Render videos ---
+// render videos
 function renderVideos() {
     const container = document.getElementById("videos");
     if (!container) return console.error("No container with id 'videos' found.");

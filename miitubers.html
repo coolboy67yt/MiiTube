@@ -39,7 +39,7 @@
                 const el = document.activeElement;
                 if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
                 const k = e.key;
-                if (!k || k.length !== 1) return; // ignore non-character keys
+                if (!k || k.length !== 1) return;
 
                 buffer += k.toLowerCase();
                 if (buffer.length > SECRET_SEQ.length) buffer = buffer.slice(-SECRET_SEQ.length);
