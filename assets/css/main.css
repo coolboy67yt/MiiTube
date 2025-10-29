@@ -8,11 +8,24 @@
   font-style: normal;
 }
 
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url("/assets/img/miiversebackground.png");
-    background-repeat: repeat;
-    background-position: 0% 0%;
-    animation: drift 60s linear infinite; /* speed + direction */
+  margin: 0;
+  background: url("/assets/img/miiversebackground.png") repeat;
+  animation: drift 60s linear infinite;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  z-index: -1;
 }
 
 @keyframes drift {
@@ -21,7 +34,8 @@ body {
 }
 
 main {
-    backdrop-filter: blur(2px);
+    padding-top: 80px;
+    margin: 10px;
 }
 
 /* fallback font */
@@ -34,7 +48,6 @@ body * {
     align-items: center;
     gap: 10px;
     font-size: 1.2em;
-    margin-top: 80px;
     font-weight: bold;
 }
 
