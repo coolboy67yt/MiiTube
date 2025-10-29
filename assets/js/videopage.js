@@ -66,6 +66,7 @@ function createVideoBox(video) {
 
     const img = document.createElement("img");
     img.src = getVideoThumbnail(video);
+    img.alt = "Thumbnail"
     img.className = "cover";
     link.appendChild(img);
 
