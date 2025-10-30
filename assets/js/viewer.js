@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+// dear artendo; what is this mess
+//          - your semi-friendly neighborhood turtledevv
+
 // === Universal Miiverse-Style "Yeah!" Button ===
 // Works in all subfolders and pages
 // === Miiverse "Yeah!" Button per Video ===

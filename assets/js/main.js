@@ -1,5 +1,10 @@
+// useless but i guess good for debugging to see if main.js is imported?
+// idfk
 console.log("welcome to miitube");
 
+// this is in charge of doing the debug css.
+// add ?dbg=1 at the end of the URL, and it'll
+// let you debug your CSS.
 (function() {
   const params = new URLSearchParams(window.location.search);
   const dbg = params.get("dbg");

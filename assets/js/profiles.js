@@ -2,6 +2,7 @@ import { users } from "/assets/data/users.js"
 
 const profileList = document.getElementById('profileList');
 
+// simple. just grab the user list and then add the profile card.
 users.forEach(user => {
     const card = document.createElement('div');
     card.className = 'profile-card';

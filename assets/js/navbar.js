@@ -1,33 +1,37 @@
+// this controls injecting the navbar onto the page
+// and also mobile resizing (JANK WARNING)
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // inject css
+    // add navbar css to page
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "/assets/css/navbar.css";
     document.head.appendChild(link);
 
-    // create navbar container
+    // create the navbar container
     const navbarContainer = document.createElement("div");
     navbarContainer.classList.add("navbar");
 
-    // push to top
+    // push nav container to top
     document.body.prepend(navbarContainer);
 
-    // get navbar html
+    // get the navbar code
     const res = await fetch("/assets/navbar.html");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const html = await res.text();
 
-    // inject
+    // put the navbar in the container
     navbarContainer.innerHTML = html;
 
     // get the logo
     const logo = navbarContainer.querySelector(".logo");
 
+
+    // this function is fckn black magic i have no clue good luck
+    // rewrite this later, this is the most jank function in this whole project
     function checkNavbar() {
         const tolerance = 1; // pixels of wiggle room
         const logoHidden = 480 - navbarContainer.clientWidth > tolerance;
-        const logo = navbarContainer.querySelector(".logo");
         const navbarLeft = navbarContainer.querySelector(".navbar-left");
         const navbarRight = navbarContainer.querySelector(".navbar-right");
 
