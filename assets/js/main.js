@@ -42,14 +42,15 @@ console.log("welcome to miitube");
   badge.textContent = 'DEVELOPER PREVIEW';
   badge.setAttribute('aria-hidden', 'true');
   badge.style.position = 'fixed';
-  badge.style.left = '12px';
-  badge.style.bottom = '12px';
-  badge.style.zIndex = '2147483647'; // why did I set it this high, one may be asking.. well, I don't care, shut up :}
+  badge.style.left = '0';
+  badge.style.bottom = '0';
+  badge.style.margin = '4px';
+  badge.style.zIndex = '6942067'; // hehe funny numbers
   badge.style.pointerEvents = 'none';
   badge.style.userSelect = 'none';
   badge.style.padding = '6px 10px';
   badge.style.fontFamily = "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial";
-  badge.style.fontSize = '15px';
+  badge.style.fontSize = '18px';
   badge.style.fontWeight = '700';
   badge.style.letterSpacing = '0.06em';
   badge.style.borderRadius = '6px';
