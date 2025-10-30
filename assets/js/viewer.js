@@ -54,6 +54,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// === Universal Miiverse-Style "Yeah!" Button ===
+// Works in all subfolders and pages
+// === Miiverse "Yeah!" Button (Always shows E + count) ===
+
+const LIKE_API = "https://miiverse-likes.onrender.com"; // dein Render Backend
+
+// Likes abrufen
+async function fetchLikes() {
+  const res = await fetch(LIKE_API + "/likes");
+  const data = await res.json();
+  return data.likes;
+}
+
+// Toggle Like / Unlike
+async function toggleLike() {
+  const likeBtn = document.getElementById("like");
+  const count = document.getElementById("count");
+
+  try {
+    const res = await fetch(LIKE_API + "/like", { method: "POST" });
+    const data = await res.json();
+
+    count.textContent = data.likes;
+
+    if (data.liked) {
+      likeBtn.setAttribute("data-tooltip", "Click to un-Yeah!");
+    } else {
+      likeBtn.setAttribute("data-tooltip", "Click to Yeah!");
+    }
+  } catch (err) {
+    console.error("Failed to contact Yeah! server:", err);
+  }
+}
+
+// Initialisieren
+window.addEventListener("DOMContentLoaded", async () => {
+  const likeBtn = document.getElementById("like");
+  const count = document.getElementById("count");
+  if (!likeBtn || !count) return;
+
+  // Startwert laden
+  count.textContent = await fetchLikes();
+
+  // Klick aktivieren
+  likeBtn.addEventListener("click", toggleLike);
+});
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/(videoID)"
 // title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
