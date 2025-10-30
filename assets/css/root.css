@@ -1,0 +1,32 @@
+:root {
+    --logo: url("/assets/img/logo.png")
+
+    --text-color: black;
+
+    --background: url("/assets/img/miiversebackground.png") repeat;
+    --background-anim: drift 60s linear infinite;
+
+    --default-font: sans-serif;
+    --symbols-font: 'Miiverse Symbols';
+
+    --mii-green: #2ee775;
+
+    --nav-videos: url("/assets/img/icons/tvii.png");
+    --nav-users: url("/assets/img/icons/miiverse.png");
+    --nav-news: url("/assets/img/icons/daily_log.png");
+    --nav-manual: url("/assets/img/icons/health_and_safety.png");
+}
+
+@font-face {
+  font-family: "Miiverse Symbols";
+  src: url("/assets/font/MiiverseSymbols-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wii Sans";
+  src: url("/assets/font/WiiSans-Regular-4.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,12 +1,7 @@
-/* general */
+@import url("root.css");
 @import url("tooltip.css");
 
-@font-face {
-  font-family: "Miiverse Symbols";
-  src: url("/assets/font/MiiverseSymbols-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+/* general */
 
 html,body {
     margin: 0;
@@ -15,8 +10,10 @@ html,body {
 
 body {
   margin: 0;
-  background: url("/assets/img/miiversebackground.png") repeat;
-  animation: drift 60s linear infinite;
+  background: var(--background);
+  color: var(--text-color);
+  animation: var(--background-anim);
+  font-family: var(--default-font);
   position: relative;
 }
 
@@ -38,11 +35,6 @@ main {
     margin: 10px;
 }
 
-/* fallback font */
-body * {
-    font-family: sans-serif;
-}
-
 .title {
     display: flex;
     align-items: center;
@@ -60,7 +52,7 @@ body * {
   position: fixed;
   inset: 0;
   background: #000;
-  color: #fff;
+  color: #21e2d9;
   display: flex;
   flex-direction: column;
   align-items: center;

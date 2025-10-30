@@ -1,3 +1,4 @@
+@import url("root.css");
 /*note to self: redo this later :}*/
 .title {
     display: flex;
@@ -9,7 +10,7 @@
 
 .title h2 {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--default-font);
     color: #585858;
     font-weight: 700;
     letter-spacing: 0.5px;

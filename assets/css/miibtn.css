@@ -1,3 +1,5 @@
+@import url("root.css");
+
 .miiverse-btn {
     display: flex;
     align-items: center;
@@ -13,7 +15,7 @@
 }
 
 .miiverse-btn span {
-    font-family: 'Miiverse Symbols';
+    font-family: var(--symbols-font);
     text-shadow: 1px 1px 0 #fff, -1px -1px 0 #0000004b;
     font-size: large;
 }

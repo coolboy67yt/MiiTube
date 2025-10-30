@@ -1,3 +1,4 @@
+@import url("root.css");
 @import url("tooltip.css");
 
 .logo {
@@ -33,7 +34,7 @@
 
 .navbar {
     background-color: rgba(240, 255, 255, 0.742);
-    border-bottom: 1px solid rgb(0, 255, 55);
+    border-bottom: 2px solid var(--mii-green);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     width: 100%;
     position: fixed;
@@ -48,3 +49,15 @@
     align-items: center;
     width: 100%;
 }
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+}
+
+
+.nav-btn.videos { background: var(--nav-videos) center/contain no-repeat; }
+.nav-btn.users { background: var(--nav-users) center/contain no-repeat; }
+.nav-btn.news { background: var(--nav-news) center/contain no-repeat; }
+.nav-btn.manual { background: var(--nav-manual) center/contain no-repeat; }
