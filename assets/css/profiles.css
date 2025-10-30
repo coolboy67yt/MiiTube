@@ -19,17 +19,17 @@
 
 .profile-list { 
     display: grid; 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px; 
-    max-width: 840px; 
-    margin: auto; 
+    max-width: 1840px; 
+    padding: 20px;
     padding-bottom: 50px;
 }
 
 .profile-card { 
     display: flex; 
     gap: 18px; 
-    background: linear-gradient(145deg, #eef6f0, #d8ead8);
+    background: linear-gradient(145deg, #cee5ec, #bcbee6);
     padding: 18px; 
     border-radius: 16px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 12px rgba(42,127,85,0.08) inset;
@@ -40,7 +40,7 @@
 .profile-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 18px rgba(42,127,85,0.15) inset;
-    background: linear-gradient(145deg, #e6f3e8, #cce5cc);
+    background: linear-gradient(145deg, #e9e6f3, #cccce5);
 }
 
 .profile-card img { 
@@ -55,7 +55,7 @@
 
 .profile-card img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(42,127,85,0.25);
+    box-shadow: 0 4px 12px rgba(42, 48, 127, 0.25);
 }
 
 .profile-info { flex: 1; }
@@ -63,14 +63,14 @@
 .profile-info a { 
     font-weight: 700; 
     text-decoration: none; 
-    color: #1f5f3b;
+    color: #1f335f;
     font-size: 1.05em;
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 .profile-info a:hover {
-    color: #38b66c;
-    text-shadow: 0 0 6px #38b66c40;
+    color: #4038b6;
+    text-shadow: 0 0 6px #3845b640;
 }
 
 .profile-info span.username {
@@ -85,10 +85,4 @@
     font-size: 0.95em; 
     color: #333;
     line-height: 1.4em;
-}
-
-@media (max-width: 600px) {
-    .profile-list {
-        grid-template-columns: 1fr;
-    }
 }

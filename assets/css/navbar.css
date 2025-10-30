@@ -34,7 +34,7 @@
 
 .navbar {
     background-color: rgba(240, 255, 255, 0.742);
-    border-bottom: 2px solid var(--mii-green);
+    border-bottom: 2px solid var(--accent-color);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     width: 100%;
     position: fixed;

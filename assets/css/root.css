@@ -1,20 +1,25 @@
 :root {
-    --logo: url("/assets/img/logo.png")
-
     --text-color: black;
+    --default-font: sans-serif;
+    --symbols-font: 'Miiverse Symbols';
+
 
     --background: url("/assets/img/miiversebackground.png") repeat;
     --background-anim: drift 60s linear infinite;
 
-    --default-font: sans-serif;
-    --symbols-font: 'Miiverse Symbols';
-
-    --mii-green: #2ee775;
-
+    /* navbar */
+    --accent-color: #2ed1e7;
+    --logo: url("/assets/img/logo.png");
     --nav-videos: url("/assets/img/icons/tvii.png");
     --nav-users: url("/assets/img/icons/miiverse.png");
     --nav-news: url("/assets/img/icons/daily_log.png");
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
+
+    /* users page */
+    --username-color: rgb(214, 255, 249);
+    --tag-color: rgb(194, 194, 194);
+    --desc-color: white;
+    --profile-gradient: linear-gradient(130deg,rgba(84, 131, 232, 1) 0%, rgba(192, 87, 199, 1) 50%, rgba(237, 160, 83, 1) 100%);;
 }
 
 @font-face {
