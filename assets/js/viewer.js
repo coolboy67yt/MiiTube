@@ -56,49 +56,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // === Universal Miiverse-Style "Yeah!" Button ===
 // Works in all subfolders and pages
-// === Miiverse "Yeah!" Button (Always shows E + count) ===
+// === Miiverse "Yeah!" Button per Video ===
 
-const LIKE_API = "https://miiverse-likes.onrender.com"; // dein Render Backend
+const LIKE_API = "https://miiverse-likes.onrender.com"; // Render Backend
 
-// Likes abrufen
-async function fetchLikes() {
-  const res = await fetch(LIKE_API + "/likes");
+async function fetchLikes(videoID) {
+  const res = await fetch(`${LIKE_API}/likes/${videoID}`);
   const data = await res.json();
   return data.likes;
 }
 
-// Toggle Like / Unlike
-async function toggleLike() {
+async function toggleLike(videoID) {
   const likeBtn = document.getElementById("like");
   const count = document.getElementById("count");
 
   try {
-    const res = await fetch(LIKE_API + "/like", { method: "POST" });
+    const res = await fetch(`${LIKE_API}/like/${videoID}`, { method: "POST" });
     const data = await res.json();
 
     count.textContent = data.likes;
-
-    if (data.liked) {
-      likeBtn.setAttribute("data-tooltip", "Click to un-Yeah!");
-    } else {
-      likeBtn.setAttribute("data-tooltip", "Click to Yeah!");
-    }
+    likeBtn.setAttribute(
+      "data-tooltip",
+      data.liked ? "Click to un-Yeah!" : "Click to Yeah!"
+    );
   } catch (err) {
     console.error("Failed to contact Yeah! server:", err);
   }
 }
 
-// Initialisieren
 window.addEventListener("DOMContentLoaded", async () => {
   const likeBtn = document.getElementById("like");
   const count = document.getElementById("count");
-  if (!likeBtn || !count) return;
 
-  // Startwert laden
-  count.textContent = await fetchLikes();
+  // getting Video id from the URL
+  const params = new URLSearchParams(window.location.search);
+  const videoID = params.get("id");
 
-  // Klick aktivieren
-  likeBtn.addEventListener("click", toggleLike);
+  if (!likeBtn || !count || !videoID) return;
+
+  count.textContent = await fetchLikes(videoID);
+  likeBtn.addEventListener("click", () => toggleLike(videoID));
 });
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/(videoID)"
