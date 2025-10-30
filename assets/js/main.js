@@ -28,5 +28,46 @@ console.log("welcome to miitube");
   }
 })();
 
+(function () {
+  // hosts that should show the text
+  const DEV_HOSTS = new Set([
+    'localhost',
+    'dev-miitube.vercel.app',
+    '127.0.0.1'
+  ]);
+
+  if (!DEV_HOSTS.has(location.hostname)) return; // for production environments
+
+  const badge = document.createElement('div');
+  badge.textContent = 'DEVELOPER PREVIEW';
+  badge.setAttribute('aria-hidden', 'true');
+  badge.style.position = 'fixed';
+  badge.style.left = '12px';
+  badge.style.bottom = '12px';
+  badge.style.zIndex = '2147483647'; // why did I set it this high, one may be asking.. well, I don't care, shut up :}
+  badge.style.pointerEvents = 'none';
+  badge.style.userSelect = 'none';
+  badge.style.padding = '6px 10px';
+  badge.style.fontFamily = "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial";
+  badge.style.fontSize = '15px';
+  badge.style.fontWeight = '700';
+  badge.style.letterSpacing = '0.06em';
+  badge.style.borderRadius = '6px';
+  badge.style.background = 'rgba(0,0,0,0.45)'; // semi-transparent
+  badge.style.color = 'rgba(255,255,255,0.92)';
+  badge.style.backdropFilter = 'saturate(120%) blur(4px)';
+  badge.style.boxShadow = '0 6px 18px rgba(0,0,0,0.35)';
+  badge.style.textTransform = 'uppercase';
+  badge.style.transform = 'translateZ(0)';
+
+  badge.style.transition = 'opacity 200ms ease, transform 200ms ease';
+  badge.style.opacity = '0.95';
+
+  document.documentElement.appendChild(badge);
+
+  badge.tabIndex = -1;
+})();
+
+
 // Add more here later if needed
 // this file is added to all pages of the site btw
