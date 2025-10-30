@@ -14,9 +14,6 @@
     align-items: center;
 }
 
-.navbar-right {
-    margin-right: 0;
-}
 
 .navbar * span {
     background: linear-gradient(to bottom, #e3e3e3, #eeeeee);
@@ -61,3 +58,4 @@
 .nav-btn.users { background: var(--nav-users) center/contain no-repeat; }
 .nav-btn.news { background: var(--nav-news) center/contain no-repeat; }
 .nav-btn.manual { background: var(--nav-manual) center/contain no-repeat; }
+.nav-btn.settings { background: var(--nav-settings) center/contain no-repeat; }

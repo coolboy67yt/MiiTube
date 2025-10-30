@@ -14,6 +14,7 @@
     --nav-users: url("/assets/img/icons/miiverse.png");
     --nav-news: url("/assets/img/icons/daily_log.png");
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
+    --nav-settings: url("/assets/img/icons/system_settings.png");
 
     /* users page */
     --username-color: rgb(214, 255, 249);
