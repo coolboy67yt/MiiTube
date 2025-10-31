@@ -27,8 +27,13 @@
       url("/assets/img/win7nav.png");
 
     --nav-bg-filter: blur(100px);
+
     --nav-videos: url("/assets/img/icons/mediaplayer.ico");
     --nav-users: url("/assets/img/icons/win_live_messenger.png");
+    --nav-manual: url('/assets/img/icons/win_help.png');
+    --nav-news: url("/assets/img/icons/win_mail.png");
+    --nav-settings: url("/assets/img/icons/control_panel.png");
+
     --nav-margin: 2px;
     --nav-btn-back: none;
 
