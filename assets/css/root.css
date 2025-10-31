@@ -17,19 +17,25 @@
     --default-font: sans-serif;
     --accent-color: rgb(207, 207, 207);
 
-    --logo: url("/assets/img/icons/mediaplayer.ico");
+    --logo: url("/assets/img/win7icon.png");
 
     --videobox-bg: #3131319d;
 
-    --nav-background: rgba(54, 54, 54, 0.742);
+    --nav-overlay-color: rgba(0, 0, 0, 0.1);
+    --nav-background:
+      linear-gradient(var(--nav-overlay-color), var(--nav-overlay-color)),
+      url("/assets/img/win7nav.png");
+
+    --nav-bg-filter: blur(100px);
     --nav-videos: url("/assets/img/icons/mediaplayer.ico");
     --nav-users: url("/assets/img/icons/win_live_messenger.png");
+    --nav-margin: 2px;
     --nav-btn-back: none;
 
     --tooltip-font: sans-serif;
 
     --background: url("/assets/img/win7bg.jpg");
-    --bg-rept: no-repeat;
+    --bg-rept: repeat-x;
     --bg-anim: none;
     --bg-atchmnt: fixed;
     --bg-size: auto 100%;
@@ -78,6 +84,7 @@
     --nav-news: url("/assets/img/icons/daily_log.png");
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
     --nav-settings: url("/assets/img/icons/system_settings.png");
+    --nav-margin: 10px;
 
     /* users page */
     --username-color: rgb(55, 129, 118);

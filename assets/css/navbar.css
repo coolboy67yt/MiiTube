@@ -3,6 +3,8 @@
 
 .logo {
     margin-right: 10px;
+    max-height: 45px;
+    content: var(--logo);
 }
 
 .logo.hidden {
@@ -17,7 +19,7 @@
 
 .navbar * span {
     background: var(--nav-btn-back);
-    margin: 10px;
+    margin: var(--nav-margin);
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -30,8 +32,11 @@
 }
 
 .navbar {
-    background-color: var(--nav-background);
+    background: var(--nav-background);
+    background-size: cover;
     border-bottom: 2px solid var(--accent-color);
+    backdrop-filter: var(--nav-bg-filter);
+    background-blend-mode: multiply;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     width: 100%;
     position: fixed;
@@ -44,7 +49,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 .nav-btn {
