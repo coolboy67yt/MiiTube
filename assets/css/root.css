@@ -45,9 +45,14 @@
 }
 
 :root[data-theme="classic"] {
+    /* navbar */
     --text-color: black;
     --default-font: sans-serif;
     --symbols-font: 'Miiverse Symbols';
+
+    --profile-gradient: linear-gradient(130deg,rgb(208, 255, 206) 0%, rgb(234, 255, 224) 100%);
+
+    --videobox-bg: #ffffff9d;
 
     --background: url("/assets/img/miiversebackground.png");
     --bg-anim: drift 60s linear infinite;
@@ -55,12 +60,30 @@
 
     /* navbar */
     --accent-color: #2ee775;
+    --nav-background: rgba(240, 255, 255, 0.742);
     --logo: url("/assets/img/logo.png");
+    --nav-btn-back: linear-gradient(to bottom, #e3e3e3, #eeeeee);
+    --nav-videos: url("/assets/img/icons/tvii.png");
+    --nav-users: url("/assets/img/icons/miiverse.png");
+    --nav-news: url("/assets/img/icons/daily_log.png");
+    --nav-manual: url("/assets/img/icons/health_and_safety.png");
+    --nav-settings: url("/assets/img/icons/system_settings.png");
+    --nav-margin: 10px;
 
     /* users page */
-    --username-color: rgb(53, 173, 73);
-    --desc-color: rgb(0, 0, 0);
-    --profile-gradient: linear-gradient(130deg,rgb(210, 255, 206) 0%, rgb(224, 255, 228) 100%);
+    --username-color: rgb(55, 129, 88);
+    --tag-color: rgb(194, 194, 194);
+    --desc-color: rgb(85, 85, 85);
+
+    /* tooltips */
+    --tooltip-bg: #222;
+    --tooltip-color: #fff;
+    --tooltip-padding: 8px 12px;
+    --tooltip-radius: 8px;
+    --tooltip-delay: 150ms;
+    --tooltip-offset: 10px;
+    --tooltip-arrow-size: 7px;
+    --tooltip-font: 'Wii Sans';
 }
 
 :root {
