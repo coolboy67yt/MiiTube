@@ -58,6 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // dear artendo; what is this mess
 //          - your semi-friendly neighborhood turtledevv
 
+// update; here's my honest review of this code:
+// " GET YOUR JANK HERE! SOME FRESH JANKY JAVASCRIPT!! "
+// " DOES IT WORK? SOMETIMES, WHEN THE STARS ALIGN "
+// " OTHERWISE, TOUGH SHIT "
+// " WEEE WOOOO JANKY JANKY JANK WARNING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA "
+//                     - your very-not-friendly-anymore neighborhood turtledevv (he's in your walls)
+
 // === Universal Miiverse-Style "Yeah!" Button ===
 // Works in all subfolders and pages
 // === Miiverse "Yeah!" Button per Video ===
