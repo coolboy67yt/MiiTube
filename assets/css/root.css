@@ -35,10 +35,10 @@
     --tooltip-font: sans-serif;
 
     --background: url("/assets/img/win7bg.jpg");
-    --bg-rept: repeat-x;
+    --bg-rept: no-repeat;
     --bg-anim: none;
     --bg-atchmnt: fixed;
-    --bg-size: auto 100%;
+    --bg-size: 100% 100%; /* looks like sh*t but idc */
     --bg-pos: right center;
 }
 
