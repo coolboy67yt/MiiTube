@@ -32,14 +32,16 @@
     --nav-margin: 2px;
     --nav-btn-back: none;
 
-    --tooltip-font: sans-serif;
-
     --background: url("/assets/img/win7bg.jpg");
     --bg-rept: no-repeat;
     --bg-anim: none;
     --bg-atchmnt: fixed;
     --bg-size: 100% 100%; /* looks like sh*t but idc */
     --bg-pos: right center;
+
+    --tooltip-bg: rgba(255, 255, 255, 0.15);
+    --tooltip-padding: 5px 10px;
+    --tooltip-font: sans-serif;
 }
 
 :root[data-theme="classic"] {
