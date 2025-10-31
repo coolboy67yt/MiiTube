@@ -1,9 +1,6 @@
 :root[data-theme="touchsomegrass"] {
-    --text-color: black;
     --default-font: 'Comic Sans MS', sans-serif;
-
     --background: url("/assets/img/grass.png") repeat;
-    --bg-anim: drift 90s linear infinite;
 }
 
 :root[data-theme="ns2"] {
@@ -55,13 +52,15 @@
     /* users page */
     --username-color: rgb(53, 173, 73);
     --desc-color: rgb(0, 0, 0);
-    --profile-gradient: linear-gradient(130deg,rgb(206, 255, 236) 0%, rgb(224, 255, 228) 100%);
+    --profile-gradient: linear-gradient(130deg,rgb(210, 255, 206) 0%, rgb(224, 255, 228) 100%);
 }
 
 :root {
     --text-color: black;
     --default-font: sans-serif;
     --symbols-font: 'Miiverse Symbols';
+
+    --profile-gradient: linear-gradient(130deg,rgb(206, 255, 236) 0%, rgb(224, 255, 228) 100%);
 
     --videobox-bg: #ffffff9d;
 
@@ -81,9 +80,9 @@
     --nav-settings: url("/assets/img/icons/system_settings.png");
 
     /* users page */
-    --username-color: rgb(214, 255, 249);
+    --username-color: rgb(55, 129, 118);
     --tag-color: rgb(194, 194, 194);
-    --desc-color: white;
+    --desc-color: rgb(85, 85, 85);
 
     /* tooltips */
     --tooltip-bg: #222;
