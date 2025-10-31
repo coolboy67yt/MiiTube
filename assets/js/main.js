@@ -1,6 +1,15 @@
+import { getCookie, setTheme, setCookie, applyTheme } from '/assets/js/theme.js';
+
 // useless but i guess good for debugging to see if main.js is imported?
 // idfk
 console.log("welcome to miitube");
+
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = getCookie('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  }
+});
 
 // this is in charge of doing the debug css.
 // add ?dbg=1 at the end of the URL, and it'll
