@@ -1,20 +1,10 @@
 @import url("root.css");
 
-:root{
-    --tooltip-bg: #222;
-    --tooltip-color: #fff;
-    --tooltip-padding: 8px 12px;
-    --tooltip-radius: 8px;
-    --tooltip-delay: 150ms;
-    --tooltip-offset: 10px;
-    --arrow-size: 7px;
-}
-
 .tooltip {
     position: relative;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Wii Sans', sans-serif;
+    font-family: var(--tooltip-font);
 }
 
 /* tooltip bubble */
@@ -40,14 +30,14 @@
 .tooltip::before {
     content: '';
     position: absolute;
-    top: calc(100% + var(--tooltip-offset) - calc(var(--arrow-size) - 1px));
+    top: calc(100% + var(--tooltip-offset) - calc(var(--tooltip-arrow-size) - 1px));
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: var(--arrow-size) solid transparent;
-    border-right: var(--arrow-size) solid transparent;
-    border-bottom: var(--arrow-size) solid var(--tooltip-bg); /* arrow points up */
+    border-left: var(--tooltip-arrow-size) solid transparent;
+    border-right: var(--tooltip-arrow-size) solid transparent;
+    border-bottom: var(--tooltip-arrow-size) solid var(--tooltip-bg); /* arrow points up */
     opacity: 0;
     transition: opacity var(--tooltip-delay) ease;
     z-index: 19;

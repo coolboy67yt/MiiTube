@@ -10,9 +10,16 @@ html,body {
 
 body {
   margin: 0;
+
+  background-color: #d8d8d8; /* fallback */
   background: var(--background);
+  background-position: var(--bg-pos);
+  background-repeat: var(--bg-rept);
+  background-size: var(--bg-size);
+  background-attachment: var(--bg-atchmnt);
+  animation: var(--bg-anim);
+
   color: var(--text-color);
-  animation: var(--background-anim);
   font-family: var(--default-font);
   position: relative;
 }
