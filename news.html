@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MiiTube | News</title>
-        <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
-        <script src="/assets/js/navbar.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiiTube | News</title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
-        <!-- CSS imports -->
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="stylesheet" href="/assets/css/news.css">
+    <script src="/assets/js/navbar.js" defer></script>
 
-    </head>
-    <body>
-        <!--stupid empty boring page-->
-        <main>
-            <div class="title"><img src="/assets/img/icons/daily_log.png" height="47px" style="border-radius: 15px;"> <h2>News</h2></div>
-            <p><a href="/secret/secret2.html">Coming soon!</a></p>
-        </main>
+    <!-- CSS imports -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/news.css">
+
+</head>
+
+<body>
+    <!--Added first News (not empty stupid anymore :D)-->
+    <main>
+        <div class="title">
+            <img src="/assets/img/icons/daily_log.png" height="47px" style="border-radius: 15px;">
+            <h2>News</h2>
+        </div>
+
+        <!-- THE TEXT (can be copy&pasted for new articles) -->
+        <section class="news-article">
+            <header class="article-header">
+                <h1 class="site-name">Test News</h1> <!--Overall Name of the News-->
+                <img class="avatar" src="/assets/img/users/Artendo.png" > <!--The uploaders Profile Picture-->
+            </header>
+
+            <div class="article">
+                <h2 class="article-title">Test Title</h2> <!--Title of the News-->
+                <div class="meta">
+                    by <b>Artendo</b> • <time datetime="2025-11-01">01.11.2025</time> <!--User and DateTime-->
+                </div>
+
+                <p>
+                    Text Text . Some more Text. Btw if your wondering yes the size of this changes on how long the text is. <!--Just some Text-->
+                </p>
+            </div>
+        </section>
         <script type="module" src="/assets/js/main.js"></script>
-    </body>
+</body>
+
 </html>
