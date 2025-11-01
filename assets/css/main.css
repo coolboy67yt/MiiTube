@@ -8,6 +8,15 @@ html,body {
     padding: 0;
 }
 
+a:link {
+  color: var(--link-text-color);
+}
+
+a:visited {
+  color: var(--link-text-color-visited); /* the old-school purple of shame */
+}
+
+
 body {
   margin: 0;
 
@@ -28,7 +37,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--bg-blur));
   z-index: -1;
 }
 
@@ -74,6 +83,10 @@ main {
 }
 
 .spinner {
+  background-size: cover;
+  background-position: center;
+  background: var(--loading-wheel);
+  background-repeat: no-repeat;
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
