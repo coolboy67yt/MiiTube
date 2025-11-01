@@ -54,6 +54,8 @@
     --bg-pos: right center;
     --bg-blur: 10px;
 
+    --content-top: 60px;
+
     --profile-gradient: linear-gradient(130deg,rgba(255, 255, 255, 0.25) 0%, rgba(233, 233, 233, 0.3) 100%);
     --username-color: rgb(55, 129, 80);
     --tag-color: rgb(226, 226, 226);
@@ -145,6 +147,8 @@
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
     --nav-settings: url("/assets/img/icons/system_settings.png");
     --nav-margin: 10px;
+
+    --content-top: 80px;
 
     --manual-back-button: url("/assets/img/ui/wiiu/black-return.png");
     --manual-back-button-size: 100%;

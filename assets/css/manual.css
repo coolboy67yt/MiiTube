@@ -1,5 +1,9 @@
 @import url("root.css");
 
+.manual-page {
+    padding-bottom: 50px;
+}
+
 .intro {
     margin-top: 10px;
     background-color: #ffffff9d;

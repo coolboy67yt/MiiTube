@@ -1,0 +1,82 @@
+<!-- from a codepen i made: https://codepen.io/coolboy67yt/pen/ZYQMZJa -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* config */
+            :root {
+                --bg-url: url('/assets/img/backgrounds/win7-1.jpg');
+
+                --blur: 10px;
+                --saturate: 150%;
+                --contrast: 120%;
+                --transparency: 0.01;
+
+                --bg: var(--bg-url) repeat-x 0 0;
+                --glass-bg: rgba(255, 255, 255, var(--transparency));
+                --filters: blur(var(--blur)) saturate(var(--saturate)) contrast(var(--contrast));
+            }
+
+            img.example {
+                border-radius: 35px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+                width: auto;
+                height: 100px;
+            }
+
+            body {
+                backdrop-filter: blur(3px);
+                height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                overflow: hidden;
+                background: var(--bg);
+                background-size: auto 100%;
+                animation: bgScroll 300s linear infinite;
+            }
+
+            @keyframes bgScroll {
+                from { background-position-x: 0; }
+                to { background-position-x: 1000%; }
+            }
+
+            .glass {
+                position: relative;
+                width: 300px;
+                padding: 40px;
+                border-radius: 25px;
+                background: var(--glass-bg);
+                backdrop-filter: var(--filters);
+                -webkit-backdrop-filter: var(--filters);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+                color: white;
+                text-align: center;
+                text-shadow: rgba(255, 255, 255, 0.015) 0px 0px 5px;
+                overflow: hidden;
+                transition: border 0.1s ease;
+            }
+
+            .glass:hover {
+                border: 1px solid rgba(255, 255, 255, 0.35);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="glass">
+            <p>
+                Test content. This is a glass thing! Wowie!<br>
+                the background is scrolling so you can better see the glass effect
+            </p><br>
+            <img class="example" src="https://dev-miitube.vercel.app/assets/img/users/Turtledevv.jpg"><br>
+            <span style="font-size: x-small; color: rgb(224, 224, 224);">made by turtledevv 🐢</span>
+        </div>
+    </body>
+</html>

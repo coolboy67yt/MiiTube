@@ -47,8 +47,8 @@ body::before {
 }
 
 main {
-    padding-top: 80px;
     margin: 10px;
+    margin-top: var(--content-top, 60px);
 }
 
 .title {

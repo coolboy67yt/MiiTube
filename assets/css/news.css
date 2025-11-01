@@ -2,30 +2,21 @@
 
  /* yu make Artendo veary Angry if yu say its bad */
 
- /* well the JS was bad.. this css is actually kinda nice tho. good job. 
+ /* well the JS was bad.. this css is actually kinda nice tho. good job.
         - turtledevv */
 
 :root {
   --radius: 18px;
 }
 
-* {
-  box-sizing: border-box;
-}
 
-body {
+main {
   margin: 0;
-  font: 16px/1.6 system-ui, Segoe UI, Roboto, Inter, Arial;
+  font: 16px/1.6 var(--default-font, sans-serif);
   display: flex;
   justify-content: center;
   padding: 28px 16px;
-
-  /* use theme background from root.css */
-  background: var(--background);
-  background-repeat: var(--bg-rept, repeat);
-  background-size: var(--bg-size, cover);
-  background-attachment: var(--bg-atchmnt, scroll);
-  background-position: var(--bg-pos, center);
+  width: 100vw;
 }
 
 /* News Article         */
