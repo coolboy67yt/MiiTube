@@ -1,9 +1,5 @@
 @import url("root.css");
 
-/* =========================
-   Default (non-TV themes)
-   ========================= */
-
 .video-box {
   width: 200px;
   height: auto;
@@ -19,19 +15,19 @@
 }
 
 .video-title {
-  margin-top: 10px;
-  padding: 3px;
+    margin-top: 10px;
+    padding: 3px;
 }
 
 .playlist-text {
-  font-size: x-small;
-  color: rgb(65, 65, 65);
+    font-size: x-small;
+    color: rgb(65, 65, 65);
 }
 
 .video-author {
-  font-size: 0.9em;
-  color: #797979;
-  margin-top: 4px;
+    font-size: 0.9em;
+    color: #797979;
+    margin-top: 4px;
 }
 
 .cover {
@@ -53,109 +49,34 @@
 }
 
 #sort-controls {
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--default-font);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--default-font);
 }
-#sort-controls label { font-weight: 600; }
+
+#sort-controls label {
+    font-weight: 600;
+}
+
 #sort-controls select {
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-#sort-controls select:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+
+#sort-controls select:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 #sort-controls select:focus {
-  outline: none;
-  border-color: #666;
-  box-shadow: 0 0 0 3px rgba(100,149,237,.3);
-}
-
-
-/* =========================
-   TV Theme overrides
-   ========================= */
-
-/* 2 große Spalten + Platz für linke Leiste */
-:root[data-theme="tv"] #videos {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(560px, 1fr));
-  gap: 56px 72px;                  /* row / column spacing */
-  justify-content: center;
-  align-items: start;
-
-  width: calc(100% - 200px);       /* Platz für die Side-Nav */
-  max-width: 1900px;               /* schön breit auf großen Screens */
-  margin: 48px auto 72px 200px;    /* Abstand zur Side-Nav */
-  padding: 0 32px;
-  box-sizing: border-box;
-}
-
-/* Card groß + glasiger Look */
-:root[data-theme="tv"] .video-box {
-  width: 100% !important;          /* bricht die 200px aus Default */
-  max-width: none;
-  border-radius: 18px;
-  padding-bottom: 0;               /* Footer getrennt */
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
-  overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-}
-
-:root[data-theme="tv"] .video-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 14px 42px rgba(0,0,0,0.45);
-  background: rgba(255,255,255,0.18);
-}
-
-/* großes 16:9 Cover oben */
-:root[data-theme="tv"] .video-box .cover {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  border-radius: 18px 18px 0 0;
-}
-
-/* Footer: Titel/Autor etwas größer */
-:root[data-theme="tv"] .video-title {
-  margin: 0;
-  padding: 14px 16px 6px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-}
-:root[data-theme="tv"] .video-author {
-  margin: 0 16px 16px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.9);
-}
-
-/* „Playlist“ Hinweis kleiner, heller */
-:root[data-theme="tv"] .playlist-text {
-  font-size: 12px;
-  color: rgba(255,255,255,0.85);
-}
-
-/* Mobile/Narrow: 1 Spalte */
-@media (max-width: 1100px) {
-  :root[data-theme="tv"] #videos {
-    grid-template-columns: 1fr;
-    margin-left: 120px;
-  }
-}
-/* Sehr schmal: volle Breite */
-@media (max-width: 720px) {
-  :root[data-theme="tv"] #videos {
-    width: 100%;
-    margin: 24px auto;
-    padding: 0 16px;
-  }
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.3); /* subtle highlight */
 }
