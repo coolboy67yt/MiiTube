@@ -1,73 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="google-site-verification" content="e-V0FuNEA1P7jIa1QhvRKZ5ynmsWZPxpK_V9wfmIbXE" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- this is just meta information, you can ignore these -->
-      <meta name="title" content="MiiTube">
-      <meta name="description" content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
-      <meta name="author" content="Jacane_U">
-      <meta name="robots" content="index, follow">
-      <link rel="canonical" href="https://miitube.vercel.app/">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="e-V0FuNEA1P7jIa1QhvRKZ5ynmsWZPxpK_V9wfmIbXE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://miitube.vercel.app/">
-      <meta property="og:title" content="MiiTube">
-      <meta property="og:description" content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
-      <meta property="og:image" content="https://miitube.vercel.app/assets/img/miicastbanner.png">
+  <!-- this is just meta information, you can ignore these -->
+  <meta name="title" content="MiiTube">
+  <meta name="description"
+    content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
+  <meta name="author" content="Jacane_U">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://miitube.vercel.app/">
 
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="MiiTube">
-      <meta name="twitter:description" content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
-      <meta name="twitter:image" content="https://miitube.vercel.app/assets/img/miicastbanner.png">
-      <meta name="twitter:creator" content="Jacane_U">
-      <!-- end of boring stuff -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://miitube.vercel.app/">
+  <meta property="og:title" content="MiiTube">
+  <meta property="og:description"
+    content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
+  <meta property="og:image" content="https://miitube.vercel.app/assets/img/miicastbanner.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MiiTube">
+  <meta name="twitter:description"
+    content="MiiTube is a platform that collects all the videos and YouTube channels related to Miis, the Wii, Wii U, 3DS, and more.">
+  <meta name="twitter:image" content="https://miitube.vercel.app/assets/img/miicastbanner.png">
+  <meta name="twitter:creator" content="Jacane_U">
+  <!-- end of boring stuff -->
 
 
-      <title>MiiTube | Videos</title>
-      <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <title>MiiTube | Videos</title>
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
-      <script src="/assets/js/navbar.js" defer></script>
-      <script src="/assets/js/loader.js" defer></script>
+  <script src="/assets/js/navbar.js" defer></script>
+  <script src="/assets/js/loader.js" defer></script>
 
-      <!-- CSS imports -->
-      <link rel="stylesheet" href="/assets/css/main.css">
-      <link rel="stylesheet" href="/assets/css/videos.css">
-  </head>
-  <body>
-      <div id="loading-screen">
-          <div class="spinner"></div>
-      </div>
+  <!-- CSS imports -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/videos.css">
+</head>
 
-      <main>
-        <!-- title -->
-        <div class="title"><img src="/assets/img/icons/tvii.png" height="47px" style="border-radius: 15px;" alt="📺"> <h2>Videos</h2></div> 
+<body>
+  <div id="loading-screen">
+    <div class="spinner"></div>
+  </div>
 
-        <div id="sort-controls" style="margin-bottom: 16px;">
-          <label for="sort-type">Sort by:</label>
-          <select id="sort-type">
-            <option value="recommended">Recommended</option>
-            <option value="date">Oldest first</option>
-            <option value="alphabetical">Alphabetically</option>
-            <option value="creator">By creator</option>
-          </select>
+  <main>
+    <!-- title -->
+    <div class="title"><img src="/assets/img/icons/tvii.png" height="47px" style="border-radius: 15px;" alt="📺">
+      <h2>Videos</h2>
+    </div>
 
-          <label for="sort-order" style="margin-left: 16px;">Order:</label>
-          <select id="sort-order">
-            <option value="normal">Normal</option>
-            <option value="reverse">Reverse</option>
-          </select>
-        </div>
+    <div id="sort-controls" style="margin-bottom: 16px;">
+      <label for="sort-type">Sort by:</label>
+      <select id="sort-type">
+        <option value="recommended">Recommended</option>
+        <option value="date">Oldest first</option>
+        <option value="alphabetical">Alphabetically</option>
+        <option value="creator">By creator</option>
+      </select>
 
-        <!-- Just like profiles, videos have moved. Edit videos in /assets/js/videos.js -->
-        <div id="videos"></div>
-      </main>
+      <label for="sort-order" style="margin-left: 16px;">Order:</label>
+      <select id="sort-order">
+        <option value="normal">Normal</option>
+        <option value="reverse">Reverse</option>
+      </select>
+    </div>
 
-      <script type="module" src="/assets/js/videopage.js"></script>
-      <script type="module" src="/assets/js/main.js"></script>
-  </body>
+
+    <!-- Just like profiles, videos have moved. Edit videos in /assets/js/videos.js -->
+    <div id="videos"></div>
+  </main>
+
+  <div class="tv-nav">
+    <a href="/index.html" data-tip="Videos">
+      <button style="background-image: var(--nav-videos);"></button>
+    </a>
+    <a href="/miitubers.html" data-tip="Users">
+      <button style="background-image: var(--nav-users);"></button>
+    </a>
+    <a href="/news.html" data-tip="News">
+      <button style="background-image: var(--nav-news);"></button>
+    </a>
+    <a href="/manual/index.html" data-tip="Manual">
+      <button style="background-image: var(--nav-manual);"></button>
+    </a>
+    <a href="/settings.html" data-tip="Settings">
+      <button style="background-image: var(--nav-settings);"></button>
+    </a>
+  </div>
+  
+  <script type="module" src="/assets/js/videopage.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+
 </html>
-
-
