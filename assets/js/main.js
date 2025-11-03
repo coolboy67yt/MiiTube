@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // this is in charge of doing the debug css.
 // add ?dbg=1 at the end of the URL, and it'll
-// let you debug your CSS.
+// let you debug your CSS. wowies.
 (function() {
   const params = new URLSearchParams(window.location.search);
   const dbg = params.get("dbg");
@@ -45,14 +45,14 @@ window.addEventListener('DOMContentLoaded', () => {
     '127.0.0.1'
   ]);
 
-  if (!DEV_HOSTS.has(location.hostname)) return; // for production environments
+  if (!DEV_HOSTS.has(location.hostname)) return; // for prod
 
   const badge = document.createElement('div');
   badge.textContent = 'DEVELOPER PREVIEW';
   badge.setAttribute('aria-hidden', 'true');
   badge.style.position = 'fixed';
   badge.style.left = '0';
-  badge.style.bottom = '0';
+  badge.style.bottom = '55px';
   badge.style.margin = '4px';
   badge.style.zIndex = '6942067'; // hehe funny numbers
   badge.style.pointerEvents = 'none';

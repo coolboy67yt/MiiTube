@@ -12,6 +12,12 @@
     --bg-anim: none;
 }
 
+:root[data-theme="tv"] {
+    --logo-display: none;
+    --nav-position: auto 0 0 auto;
+    --nav-direction: column;
+}
+
 :root[data-theme="vista"] {
     --text-color: rgb(255, 255, 255);
     --default-font: sans-serif;
@@ -140,6 +146,7 @@
     --accent-color: #2ed1e7;
     --nav-background: rgba(240, 255, 255, 0.742);
     --logo: url("/assets/img/logo.png");
+    --logo-display: block;
     --nav-btn-back: linear-gradient(to bottom, #e3e3e3, #eeeeee);
     --nav-videos: url("/assets/img/icons/tvii.png");
     --nav-users: url("/assets/img/icons/miiverse.png");
@@ -147,8 +154,11 @@
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
     --nav-settings: url("/assets/img/icons/system_settings.png");
     --nav-margin: 10px;
+    --nav-position: 0 auto auto 0;
+    --nav-direction: row;
 
     --content-top: 80px;
+
 
     --manual-back-button: url("/assets/img/ui/wiiu/black-return.png");
     --manual-back-button-size: 100%;
