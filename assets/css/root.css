@@ -23,6 +23,14 @@
     --nav-btn-back: none;
     --nav-justify: center;
     --content-margin: 10px 10px 10px 100px;
+    --background: linear-gradient(180deg,rgba(81, 232, 182, 1) 0%, rgba(62, 222, 190, 1) 50%, rgba(24, 151, 153, 1) 100%);
+    --bg-rept: no-repeat;
+    --bg-anim: none;
+    --bg-atchmnt: fixed;
+    --bg-size: cover;
+    --bg-pos: right center;
+    --bg-blur: 10px;
+    --text-color: white;
 }
 
 :root[data-theme="vista"] {
