@@ -24,7 +24,7 @@
 
 .navbar * span {
     background: var(--nav-btn-back);
-    margin: var(--nav-margin);
+    margin: var(--nav-btn-margin);
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -68,12 +68,11 @@
     position: fixed;
     inset: var(--nav-position);
     z-index: 100;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: var(--nav-padding);
     box-sizing: border-box;
     display: flex;
     flex-direction: var(--nav-direction);
-    justify-content: space-between;
+    justify-content: var(--nav-justify);
     align-items: center;
 }
 
