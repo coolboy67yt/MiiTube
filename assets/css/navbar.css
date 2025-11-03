@@ -68,7 +68,8 @@
     backdrop-filter: var(--nav-bg-filter);
     background-blend-mode: multiply;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    width: 100%;
+    width: var(--nav-width);
+    height: var(--nav-height);
     position: fixed;
     inset: var(--nav-position);
     z-index: 100;
