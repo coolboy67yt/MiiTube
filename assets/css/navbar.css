@@ -44,11 +44,6 @@
     .navbar {
         justify-content: center !important;
     }
-
-    .navbar-left,
-    .navbar-right {
-        justify-content: flex-start;
-    }
 }
 
 @media (max-width: 325px) {
