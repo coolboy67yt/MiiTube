@@ -45,6 +45,7 @@ main {
 .news-article {
   width: 100%;
   max-width: 960px;
+  margin-bottom: 40px;
 
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(16px) saturate(180%);

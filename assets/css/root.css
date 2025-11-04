@@ -23,7 +23,8 @@
     --nav-btn-back: none;
     --nav-justify: center;
     --content-margin: 10px 10px 10px 100px;
-    --background: linear-gradient(180deg,rgba(81, 232, 182, 1) 0%, rgba(62, 222, 190, 1) 50%, rgba(24, 151, 153, 1) 100%);
+
+    --background: linear-gradient(180deg,rgb(232, 81, 219) 0%, rgb(222, 62, 110) 50%, rgb(22, 17, 19) 100%);
     --bg-rept: no-repeat;
     --bg-anim: none;
     --bg-atchmnt: fixed;
