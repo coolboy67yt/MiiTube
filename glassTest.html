@@ -9,16 +9,20 @@
         <style>
             /* config */
             :root {
-                --bg-url: url('/assets/img/backgrounds/win7-1.jpg');
+                --bg: url('/assets/img/backgrounds/win7-1.jpg') repeat-x 0 0;
 
-                --blur: 10px;
-                --saturate: 150%;
-                --contrast: 120%;
-                --transparency: 0.01;
+                --div-bg: rgba(255, 255, 255, var(0.01));
+                --div-filters: blur(10px) saturate(150%) contrast(var(120%;));
+                --div-border: 1px solid rgba(255, 255, 255, 0.2);
+                --div-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            }
 
-                --bg: var(--bg-url) repeat-x 0 0;
-                --glass-bg: rgba(255, 255, 255, var(--transparency));
-                --filters: blur(var(--blur)) saturate(var(--saturate)) contrast(var(--contrast));
+            .glass {
+                background: var(--div-bg);
+                backdrop-filter: var(--div-filters);
+                -webkit-backdrop-filter: var(--div-filters);
+                border: var(--div-border);
+                box-shadow: var(--div-shadow);
             }
 
             img.example {
@@ -47,16 +51,11 @@
                 to { background-position-x: 1000%; }
             }
 
-            .glass {
+            div {
                 position: relative;
                 width: 300px;
                 padding: 40px;
                 border-radius: 25px;
-                background: var(--glass-bg);
-                backdrop-filter: var(--filters);
-                -webkit-backdrop-filter: var(--filters);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
                 color: white;
                 text-align: center;
                 text-shadow: rgba(255, 255, 255, 0.015) 0px 0px 5px;
