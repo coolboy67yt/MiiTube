@@ -6,7 +6,7 @@ users.forEach(user => {
     const card = document.createElement('div');
     card.className = 'profile-card';
     card.innerHTML = `
-        <img src="${user.profilePic}" alt="${user.name}">
+        <a href="${user.youtube}" target="_blank"><img src="${user.profilePic}" alt="${user.name}"></a>
         <div class="profile-info">
             <a href="${user.youtube}" target="_blank">${user.name}</a><span class="username">(${user.username})</span>
             <p>${user.description}</p>
