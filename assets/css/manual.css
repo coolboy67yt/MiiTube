@@ -1,5 +1,12 @@
 @import url("root.css");
 
+main,
+.manual-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px
+}
+
 .intro {
     margin-top: 10px;
     background-color: #ffffff9d;
