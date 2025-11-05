@@ -1,4 +1,5 @@
 import { videos } from '/assets/data/videos.js';
+import { users } from '/assets/data/users.js';
 
 function getVideoThumbnail(video) {
   if(video.thumbnail) { // If the thumbnail is already provided, simply override and use this one
@@ -84,10 +85,14 @@ function createVideoBox(video) {
     const authorDiv = document.createElement("div");
     authorDiv.className = "video-author";
 
+    // If a backend was added later, this would have to be altered to properly fetch the channel name in the backend
+    let user = users.find(u => u.username.substring(1) === video.author), authorName = video.author;
+    if (user) authorName = user.name;
+
     if (devMode) {
-        authorDiv.textContent = `by ${video.author} | ${originalIndex}`;
+        authorDiv.textContent = `by ${authorName} | ${originalIndex}`;
     } else {
-        authorDiv.textContent = `by ${video.author}`;
+        authorDiv.textContent = `by ${authorName}`;
     }
 
     box.appendChild(titleDiv);
