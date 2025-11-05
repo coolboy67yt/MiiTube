@@ -21,11 +21,11 @@ export const users = [
         description: "Welcome to Mii Creator! Create and share Mii characters online with just a few clicks!"
     },
     {
-        name: "TripleDash",
-        username: "@tripledashngx",
-        youtube: "https://www.youtube.com/@tripledashngx",
-        profilePic: "/assets/img/users/TripleDash.jpg",
-        description: "We're a group of friends who love making videos where we make each other laugh while playing our favorite games. You'll catch a ton of Mario Kart and other party games."
+        name: "ngx³",
+        username: "@ngx3",
+        youtube: "https://www.youtube.com/@ngx3",
+        profilePic: "/assets/img/users/ngx3.jpg",
+        description: "We're a group of friends who love making videos where we make each other laugh while playing our favorite games. You'll catch a ton of Mario Kart and other party games, as we're always looking for a new way to have fun."
     },
     {
         name: "MiiMaker",
