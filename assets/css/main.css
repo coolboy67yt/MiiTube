@@ -13,7 +13,7 @@ a:link {
 }
 
 a:visited {
-  color: var(--link-text-color-visited); /* the old-school purple of shame */
+  color: var(--link-text-color-visited);
 }
 
 
