@@ -14,7 +14,7 @@ export const users = [
         description: "I like developing stupid stuff in HTML, CSS, JS, Svelte, Python, you get it. I also like (pre-2020) Nintendo. I also worked on the frontend of this site!"
     },
     {
-        name: "MiiCreatorReal",
+        name: "Mii Creator",
         username: "@MiiCreatorREAL",
         youtube: "https://www.youtube.com/@MiiCreatorREAL",
         profilePic: "/assets/img/users/MiiCreatorREAL.jpg",
