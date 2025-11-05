@@ -1,1 +1,175 @@
 @import url("root.css");
+
+/* yu make Artendo veary Angry if yu say its bad */
+
+/* well the JS was bad.. this css is actually kinda nice tho. good job.
+      - turtledevv */
+
+     /* Eddited this file cause the news where behind/inside the navbar
+        - Artendo
+/* Root variables       */
+
+:root {
+  --radius: 18px;
+}
+
+/* Main layout          */
+
+main {
+  /* base layout */
+  margin: 0 auto;
+  font: 16px/1.6 var(--default-font, sans-serif);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding: 80px 16px 60px;
+  width: 100%;
+  max-width: 960px;
+
+  position: relative;
+  z-index: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+/* News Article         */
+
+.news-article {
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 40px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+  color: var(--text-color, #111);
+  transition: background 0.3s ease;
+}
+
+/* hover feedback */
+.news-article:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Header section       */
+
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px 6px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-name {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 20px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Article content      */
+
+.article {
+  padding: 18px 20px 24px 20px;
+}
+
+.article-title {
+  margin: 8px 0 6px 0;
+  font-size: clamp(26px, 3.6vw, 38px);
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+}
+
+.meta {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.meta b {
+  color: var(--text-color, #111);
+}
+
+.meta time {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.article p {
+  margin: 12px 0;
+  color: var(--text-color, #111);
+}
+
+.article a {
+  color: var(--accent-color, #0078ff);
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+/* Image figure block   */
+
+.figure {
+  margin: 18px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 8px 10px 10px 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Mobile adjustments   */
+
+@media (max-width: 520px) {
+  .avatar {
+    width: 46px;
+    height: 46px;
+  }
+
+  .site-name {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 60px 12px 40px;
+  }
+}

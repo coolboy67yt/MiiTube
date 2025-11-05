@@ -1,7 +1,16 @@
 import { videos } from '/assets/data/videos.js';
 
-function getEmbedLink(videoID) {
-  return `https://www.youtube.com/embed/${videoID}`;
+function getEmbedLink(videoID, videoPlatform) {
+  if (videoPlatform === "yt") {
+      return `https://www.youtube.com/embed/${videoID}`;
+  } else if (videoPlatform === "od") {
+      return `https://odysee.com/$/embed/${videoID}`;
+  } else if (videoPlatform === "vm") {
+      return `https://player.vimeo.com/video/${videoID}`;
+  } else {
+      console.error(`fatal: unknown video platform "${videoPlatform}"`);
+      return `data:text/html;charset=utf-8,<h1 style='color:red;'>Error</h1><p>unknown video platform "${videoPlatform}"</p>`;
+  }
 }
 
 // example usage:
@@ -41,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = videos[videoID - 1]
 
     if (video.type === "video") {
-        const embedLink = getEmbedLink(video.id);
+        const embedLink = getEmbedLink(video.id, video.platform);
         const videoTitle = video.title;
         const videoAuthor = video.author;
         const authorPFP = `/assets/img/users/${videoAuthor}.jpg`;
@@ -54,6 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;"
+// src="https://odysee.com/%24/embed/(videoID)" allowfullscreen></iframe>
+
+// <iframe title="vimeo-player" src="https://player.vimeo.com/video/(videoID)" frameborder="0"
+// referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media;
+// web-share" allowfullscreen></iframe>
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/(videoID)"
 // title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;

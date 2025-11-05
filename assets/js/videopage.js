@@ -1,4 +1,6 @@
-import { videos } from '/assets/data/videos.js';
+// sorry for the lack of comments later on in the file
+
+import { videos } from '/assets/data/videos.js'; // get the video list
 import { users } from '/assets/data/users.js';
 
 function getVideoThumbnail(video) {
@@ -11,12 +13,14 @@ function getVideoThumbnail(video) {
 // for figurin out vid IDs and stuff
 const devMode = false;
 
+// this is for the "Recommended" sort.
 const recommendedVideos = [1, 8, 24, 17, 7, 15, 43, 27, 25, 34, 29, 20, 9, 13, 4, 23, 11];
 
 let currentSort = "recommended";
 let reverseOrder = false;
 
 function getSortedVideos() {
+    // this handles how things are sorted on the page
     let sorted = [...videos];
 
     switch (currentSort) {

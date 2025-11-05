@@ -17,21 +17,22 @@
 }
 
 
-.profile-list { 
-    display: grid; 
+.profile-list {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px; 
-    max-width: 840px; 
-    margin: auto; 
+    gap: 24px;
+    max-width: 900px;
     padding-bottom: 50px;
+
+    margin: 0 auto;
 }
 
-.profile-card { 
-    display: flex; 
-    gap: 18px; 
-    background: linear-gradient(145deg, #eef6f0, #d8ead8);
-    padding: 18px; 
-    border-radius: 16px; 
+.profile-card {
+    display: flex;
+    gap: 18px;
+    background: var(--profile-gradient);
+    padding: 18px;
+    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 12px rgba(42,127,85,0.08) inset;
     transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
     border: 1px solid rgba(42,127,85,0.1);
@@ -40,13 +41,12 @@
 .profile-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 18px rgba(42,127,85,0.15) inset;
-    background: linear-gradient(145deg, #e6f3e8, #cce5cc);
 }
 
-.profile-card img { 
-    width: 70px; 
-    height: 70px; 
-    object-fit: cover; 
+.profile-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid rgba(42,127,85,0.2);
     box-shadow: 0 2px 6px rgba(42,127,85,0.15);
@@ -55,40 +55,33 @@
 
 .profile-card img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(42,127,85,0.25);
+    box-shadow: 0 4px 12px rgba(42, 48, 127, 0.25);
 }
 
 .profile-info { flex: 1; }
 
-.profile-info a { 
-    font-weight: 700; 
-    text-decoration: none; 
-    color: #1f5f3b;
+.profile-info a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--username-color);
     font-size: 1.05em;
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 .profile-info a:hover {
-    color: #38b66c;
-    text-shadow: 0 0 6px #38b66c40;
+    text-shadow: 0 0 6px #cacaca40;
 }
 
 .profile-info span.username {
     font-weight: 500;
     font-size: 0.85em;
     color: #777;
-    margin-left: 6px;
+    margin-left: 1px;
 }
 
-.profile-info p { 
-    margin: 6px 0 0; 
-    font-size: 0.95em; 
-    color: #333;
+.profile-info p {
+    margin: 6px 0 0;
+    font-size: 0.95em;
+    color: var(--desc-color);
     line-height: 1.4em;
-}
-
-@media (max-width: 600px) {
-    .profile-list {
-        grid-template-columns: 1fr;
-    }
 }

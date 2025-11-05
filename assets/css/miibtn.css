@@ -5,9 +5,11 @@
     align-items: center;
     gap: 5px;
     padding: 5px 8px;
-    background-color: #fafafa;
+    background: var(--button-bg);
     border-radius: 10px;
-    border: none;
+    color: var(--button-txt-color);
+    border: var(--button-border);
+    font-weight: var(--button-font-weight);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
     transition:
         box-shadow 0.15s ease,

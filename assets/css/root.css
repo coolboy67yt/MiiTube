@@ -1,6 +1,142 @@
-:root {
-    --logo: url("/assets/img/logo.png")
+:root[data-theme="touchsomegrass"] {
+    --default-font: 'Comic Sans MS', sans-serif;
+    --background: url("/assets/img/grass.png") repeat;
+}
 
+:root[data-theme="ns2"] {
+    --text-color: black;
+    --default-font: sans-serif;
+    --accent-color: rgba(84, 131, 232, 1);
+
+    --background: rgb(241, 241, 241);
+    --bg-anim: none;
+}
+
+:root[data-theme="tv"] {
+    --logo-display: none;
+    --nav-position: auto auto 0 0;
+    --nav-btn-margin: 5px 0px;
+    --nav-direction: column;
+    --nav-width: auto;
+    --nav-background: rgba(0, 0, 0, 0.05);
+    --nav-height: 100%;
+    --nav-btn-back: none;
+    --nav-justify: center;
+    --content-margin: 10px 10px 10px 100px;
+
+    --background: linear-gradient(180deg,rgb(232, 81, 219) 0%, rgb(222, 62, 110) 50%, rgb(22, 17, 19) 100%);
+    --bg-rept: no-repeat;
+    --bg-anim: none;
+    --bg-atchmnt: fixed;
+    --bg-size: cover;
+    --bg-pos: right center;
+    --bg-blur: 10px;
+    --text-color: white;
+}
+
+:root[data-theme="vista"] {
+    --text-color: rgb(255, 255, 255);
+    --default-font: sans-serif;
+    --accent-color: rgb(207, 207, 207);
+
+    --logo: url("/assets/img/ui/vista/win7icon.png");
+
+    --videobox-bg: #3131319d;
+
+    --nav-overlay-color: rgba(0, 0, 0, 0.1);
+    --nav-background:
+      linear-gradient(var(--nav-overlay-color), var(--nav-overlay-color)),
+      url("/assets/img/ui/vista/navbar.png");
+
+    --nav-bg-filter: blur(100px);
+
+    --nav-videos: url("/assets/img/icons/mediaplayer.ico");
+    --nav-users: url("/assets/img/icons/win_live_messenger.png");
+    --nav-manual: url('/assets/img/icons/win_help.png');
+    --nav-news: url("/assets/img/icons/win_mail.png");
+    --nav-settings: url("/assets/img/icons/control_panel.png");
+
+    --nav-padding: 2px 10px;
+    --nav-btn-margin: 2px;
+    --nav-btn-back: none;
+
+    --manual-back-button: url("/assets/img/ui/vista/return.png");
+    --manual-back-button-size: 65%;
+
+    --link-text-color: rgb(0, 17, 255);
+    --link-text-color-visited: rgb(145, 119, 238);
+
+    --loading-wheel: url("/assets/img/ui/vista/loading.png");
+
+    --background: url("/assets/img/backgrounds/win7-1.jpg");
+
+    --bg-rept: no-repeat;
+    --bg-anim: none;
+    --bg-atchmnt: fixed;
+    --bg-size: cover;
+    --bg-pos: right center;
+    --bg-blur: 10px;
+
+    --content-top: 60px;
+
+    --profile-gradient: linear-gradient(130deg,rgba(255, 255, 255, 0.25) 0%, rgba(233, 233, 233, 0.3) 100%);
+    --username-color: rgb(55, 129, 80);
+    --tag-color: rgb(226, 226, 226);
+    --desc-color: rgb(236, 236, 236);
+
+    --button-bg: linear-gradient(180deg,rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.5) 100%);
+    --button-txt-color: rgb(41, 41, 41);
+    --button-border: 1px solid rgba(255, 255, 255, 0.945);
+    --button-font-weight: bold;
+
+    --tooltip-bg: rgba(255, 255, 255, 0.336);
+    --tooltip-padding: 5px 10px;
+    --tooltip-font: sans-serif;
+}
+
+:root[data-theme="classic"] {
+    /* navbar */
+    --text-color: black;
+    --default-font: sans-serif;
+    --symbols-font: 'Miiverse Symbols';
+
+    --profile-gradient: linear-gradient(130deg,rgb(208, 255, 206) 0%, rgb(234, 255, 224) 100%);
+
+    --videobox-bg: #ffffff9d;
+
+    --background: url("/assets/img/backgrounds/miiverse.png");
+    --bg-anim: drift 60s linear infinite;
+    --bg-rept: repeat;
+
+    /* navbar */
+    --accent-color: #2ee775;
+    --nav-background: rgba(240, 255, 255, 0.742);
+    --logo: url("/assets/img/logo.png");
+    --nav-btn-back: linear-gradient(to bottom, #e3e3e3, #eeeeee);
+    --nav-videos: url("/assets/img/icons/tvii.png");
+    --nav-users: url("/assets/img/icons/miiverse.png");
+    --nav-news: url("/assets/img/icons/daily_log.png");
+    --nav-manual: url("/assets/img/icons/health_and_safety.png");
+    --nav-settings: url("/assets/img/icons/system_settings.png");
+    --nav-margin: 10px;
+
+    /* users page */
+    --username-color: rgb(55, 129, 88);
+    --tag-color: rgb(194, 194, 194);
+    --desc-color: rgb(85, 85, 85);
+
+    /* tooltips */
+    --tooltip-bg: #222;
+    --tooltip-color: #fff;
+    --tooltip-padding: 8px 12px;
+    --tooltip-radius: 8px;
+    --tooltip-delay: 150ms;
+    --tooltip-offset: 10px;
+    --tooltip-arrow-size: 7px;
+    --tooltip-font: 'Wii Sans';
+}
+
+:root {
     --text-color: black;
 
     --background: url("/assets/img/miiversebackground.png") repeat;
@@ -9,12 +145,66 @@
     --default-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --symbols-font: 'Miiverse Symbols';
 
-    --mii-green: #2ee775;
+    --videobox-bg: #ffffff9d;
 
+    --background: url("/assets/img/backgrounds/miiverse.png");
+    --bg-anim: drift 60s linear infinite;
+    --bg-rept: repeat;
+    --bg-blur: 4px;
+    --bg-atchmnt: scroll;
+    --bg-size: auto;
+    --bg-pos: center;
+
+    --link-text-color: blue;
+    --link-text-color-visited: purple;
+
+    --button-bg: #fafafa;
+    --button-border: none;
+    --button-txt-color: black;
+    --button-font-weight: normal;
+
+    /* navbar */
+    --accent-color: #2ed1e7;
+    --nav-background: rgba(240, 255, 255, 0.742);
+    --logo: url("/assets/img/logo.png");
+    --logo-display: block;
+    --nav-btn-back: linear-gradient(to bottom, #e3e3e3, #eeeeee);
     --nav-videos: url("/assets/img/icons/tvii.png");
     --nav-users: url("/assets/img/icons/miiverse.png");
     --nav-news: url("/assets/img/icons/daily_log.png");
     --nav-manual: url("/assets/img/icons/health_and_safety.png");
+    --nav-settings: url("/assets/img/icons/system_settings.png");
+    --nav-btn-margin: 10px;
+    --nav-position: 0 auto auto 0;
+    --nav-direction: row;
+    --nav-width: 100%;
+    --nav-height: auto;
+    --nav-padding: 0px 15px;
+    --nav-justify: space-between;
+
+    --content-margin: 80px 10px 10px 10px;
+
+
+    --manual-back-button: url("/assets/img/ui/wiiu/black-return.png");
+    --manual-back-button-size: 100%;
+
+    --loading-wheel: url("/assets/img/ui/wiiu/loading.png");
+
+    /* users page */
+    --profile-gradient: linear-gradient(130deg,rgb(206, 237, 255) 0%, rgb(224, 255, 253) 100%);
+    --username-color: rgb(55, 129, 118);
+    --tag-color: rgb(194, 194, 194);
+    --desc-color: rgb(85, 85, 85);
+
+    /* tooltips */
+    --tooltip-bg: #222;
+    --tooltip-color: #fff;
+    --tooltip-padding: 8px 12px;
+    --tooltip-radius: 8px;
+    --tooltip-delay: 150ms;
+    --tooltip-offset: 10px;
+    --tooltip-arrow-size: 7px;
+    --tooltip-font: 'Wii Sans';
 }
 
 @font-face {

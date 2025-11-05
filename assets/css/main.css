@@ -8,11 +8,26 @@ html,body {
     padding: 0;
 }
 
+a:link {
+  color: var(--link-text-color);
+}
+
+a:visited {
+  color: var(--link-text-color-visited); /* the old-school purple of shame */
+}
+
+
 body {
   margin: 0;
+
   background: var(--background);
+  background-position: var(--bg-pos);
+  background-repeat: var(--bg-rept);
+  background-size: var(--bg-size);
+  background-attachment: var(--bg-atchmnt);
+  animation: var(--bg-anim);
+
   color: var(--text-color);
-  animation: var(--background-anim);
   font-family: var(--default-font);
   position: relative;
 }
@@ -21,8 +36,20 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--bg-blur));
   z-index: -1;
+}
+
+/* since webkit browsers (such as SAFARI) are stupid and stupid and buggy
+and... did i mention that they are stupid already?.. anyways basically webkit
+doesn't like the -1 z-index, so safari users don't get background blur.
+sad. get a better browser. */
+@supports (-webkit-touch-callout: none) {
+  body::before {
+    z-index: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
 }
 
 @keyframes drift {
@@ -31,8 +58,7 @@ body::before {
 }
 
 main {
-    padding-top: 80px;
-    margin: 10px;
+    margin: var(--content-margin);
 }
 
 .title {
@@ -67,6 +93,10 @@ main {
 }
 
 .spinner {
+  background: var(--loading-wheel);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
