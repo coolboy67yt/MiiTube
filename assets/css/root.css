@@ -163,7 +163,7 @@
     --text_color: black;
     --text_link: blue;
     --text_linkVisited: purple;
-    --text_defaultFont: sans-serif;
+    --text_defaultFont: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
     --text_symbolsFont: 'Miiverse Symbols';
 
 
@@ -248,4 +248,8 @@
   src: url("/assets/font/WiiSans-Regular-4.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+
+input, textarea, select, option {
+  font: inherit;
 }

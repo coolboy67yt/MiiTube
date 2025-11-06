@@ -16,7 +16,7 @@ export const users = [
         verified: true
     },
     {
-        name: "MiiCreatorReal",
+        name: "Mii Creator",
         username: "@MiiCreatorREAL",
         youtube: "https://www.youtube.com/@MiiCreatorREAL",
         profilePic: "/assets/img/users/MiiCreatorREAL.jpg",
@@ -24,11 +24,11 @@ export const users = [
         verified: false
     },
     {
-        name: "TripleDash",
-        username: "@tripledashngx",
-        youtube: "https://www.youtube.com/@tripledashngx",
-        profilePic: "/assets/img/users/TripleDash.jpg",
-        description: "We're a group of friends who love making videos where we make each other laugh while playing our favorite games. You'll catch a ton of Mario Kart and other party games.",
+        name: "ngx³",
+        username: "@ngx3",
+        youtube: "https://www.youtube.com/@ngx3",
+        profilePic: "/assets/img/users/ngx3.jpg",
+        description: "We're a group of friends who love making videos where we make each other laugh while playing our favorite games. You'll catch a ton of Mario Kart and other party games, as we're always looking for a new way to have fun.",
         verified: false
     },
     {
