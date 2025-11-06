@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (!DEV_HOSTS.has(location.hostname)) return; // for prod
 
   const badge = document.createElement('div');
-  badge.textContent = 'EVERYTHING IS BROKEN IM SO SORRY - turtledevv';
+  badge.textContent = 'DEVELOPER PREVIEW';
   badge.setAttribute('aria-hidden', 'true');
   badge.style.position = 'fixed';
   badge.style.left = '10px';
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
   badge.style.pointerEvents = 'none';
   badge.style.userSelect = 'none';
   badge.style.padding = '6px 10px';
-  badge.style.fontFamily = "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial";
+  badge.style.fontFamily = "Inter, sans-serif";
   badge.style.fontSize = '18px';
   badge.style.fontWeight = '700';
   badge.style.letterSpacing = '0.06em';
