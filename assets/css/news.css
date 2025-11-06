@@ -1,17 +1,11 @@
 @import url("root.css");
 
-/* Root variables       */
-
 :root {
   --radius: 18px;
 }
 
-/* Main layout          */
-
 main {
-  /* base layout */
   margin: 0 auto;
-  font: 16px/1.6 var(--default-font, sans-serif);
 
   display: flex;
   justify-content: center;
@@ -49,7 +43,7 @@ main {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
   overflow: hidden;
-  color: var(--text-color, #111);
+  color: var(--text_color);
   transition: background 0.3s ease;
 }
 
@@ -106,7 +100,7 @@ main {
 }
 
 .meta b {
-  color: var(--text-color, #111);
+  color: var(--text_color);
 }
 
 .meta time {
@@ -115,11 +109,11 @@ main {
 
 .article p {
   margin: 12px 0;
-  color: var(--text-color, #111);
+  color: var(--text_color);
 }
 
 .article a {
-  color: var(--accent-color, #0078ff);
+  color: var(--misc_accentColor);
   text-decoration: none;
 }
 

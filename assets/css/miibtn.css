@@ -1,49 +1,49 @@
 @import url("root.css");
 
-.miiverse-btn {
+.button {
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 5px 8px;
-    background: var(--button-bg);
+    background: var(--button_bg);
     border-radius: 10px;
-    color: var(--button-txt-color);
-    border: var(--button-border);
-    font-weight: var(--button-font-weight);
+    color: var(--button_txtColor);
+    border: var(--button_border);
+    font-weight: var(--button_fontWeight);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
     transition:
         box-shadow 0.15s ease,
         transform 0.1s ease;
 }
 
-.miiverse-btn span {
-    font-family: var(--symbols-font);
+.button span {
+    font-family: var(--text_symbolsFont);
     text-shadow: 1px 1px 0 #fff, -1px -1px 0 #0000004b;
     font-size: large;
 }
 
-.miiverse-btn:active {
+.button:active {
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.192),
                 inset -2px -2px 5px rgba(255,255,255,0.8);
     transform: scale(0.95)
 }
 
-.miiverse-btn.green span {
+.button.green span {
     color: rgb(41, 216, 41);
 }
 
-.miiverse-btn.red span {
+.button.red span {
     color: rgb(216, 41, 41);
 }
 
-.miiverse-btn.blue span {
+.button.blue span {
     color: rgb(41, 146, 216);
 }
 
-.miiverse-btn.gold span {
+.button.gold span {
     color: rgb(250, 214, 12);
 }
 
-.miiverse-btn.purple span {
+.button.purple span {
     color: rgb(155, 12, 250);
 }

@@ -2,13 +2,13 @@
 @import url("tooltip.css");
 
 .logo {
-    content: var(--logo);
+    content: var(--nav_logo);
     max-height: 45px;
 }
 
 #logo-container {
-    display: var(--logo-display);
-    margin-right: 10px;
+    display: var(--nav_logoDisplay);
+    margin: var(--nav_iconMargin);
 }
 
 #logo-container.hidden {
@@ -22,8 +22,8 @@
 
 
 .navbar * span {
-    background: var(--nav-btn-back);
-    margin: var(--nav-btn-margin);
+    background: var(--nav_iconBg);
+    margin: var(--nav_iconMargin);
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -56,28 +56,28 @@
 
 
 .navbar {
-    background: var(--nav-background);
+    background: var(--nav_background);
     background-size: cover;
-    border-bottom: 2px solid var(--accent-color);
-    backdrop-filter: var(--nav-bg-filter);
+    border-bottom: 2px solid var(--misc_accentColor);
+    backdrop-filter: var(--nav_backgroundFilter);
     background-blend-mode: multiply;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    width: var(--nav-width);
-    height: var(--nav-height);
+    width: var(--nav_width);
+    height: var(--nav_height);
     position: fixed;
-    inset: var(--nav-position);
+    inset: var(--nav_position);
     z-index: 100;
-    padding: var(--nav-padding);
+    padding: var(--nav_padding);
     box-sizing: border-box;
     display: flex;
-    flex-direction: var(--nav-direction);
-    justify-content: var(--nav-justify);
+    flex-direction: var(--nav_direction);
+    justify-content: var(--nav_justify);
     align-items: center;
 }
 
 .navbar * {
     display: flex;
-    flex-direction: var(--nav-direction);
+    flex-direction: var(--nav_direction);
 }
 
 .nav-btn {
@@ -87,8 +87,8 @@
 }
 
 /* ..jank? jank. */
-.nav-btn.videos { background: var(--nav-videos) center/contain no-repeat; }
-.nav-btn.users { background: var(--nav-users) center/contain no-repeat; }
-.nav-btn.news { background: var(--nav-news) center/contain no-repeat; }
-.nav-btn.manual { background: var(--nav-manual) center/contain no-repeat; }
-.nav-btn.settings { background: var(--nav-settings) center/contain no-repeat; }
+.nav-btn.videos { background: var(--navIcon_videos) center/contain no-repeat; }
+.nav-btn.users { background: var(--navIcon_users) center/contain no-repeat; }
+.nav-btn.news { background: var(--navIcon_news) center/contain no-repeat; }
+.nav-btn.manual { background: var(--navIcon_manual) center/contain no-repeat; }
+.nav-btn.settings { background: var(--navIcon_settings) center/contain no-repeat; }

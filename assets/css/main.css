@@ -9,26 +9,26 @@ html,body {
 }
 
 a:link {
-  color: var(--link-text-color);
+  color: var(--text_link);
 }
 
 a:visited {
-  color: var(--link-text-color-visited);
+  color: var(--text_linkVisited);
 }
 
 
 body {
   margin: 0;
 
-  background: var(--background);
-  background-position: var(--bg-pos);
-  background-repeat: var(--bg-rept);
-  background-size: var(--bg-size);
-  background-attachment: var(--bg-atchmnt);
-  animation: var(--bg-anim);
+  background: var(--bg_src);
+  background-position: var(--bg_pos);
+  background-repeat: var(--bg_rept);
+  background-size: var(--bg_size);
+  background-attachment: var(--bg_atchmnt);
+  animation: var(--bg_anim);
 
-  color: var(--text-color);
-  font-family: var(--default-font);
+  color: var(--text_color);
+  font-family: var(--text_defaultFont);
   position: relative;
 }
 
@@ -58,7 +58,7 @@ sad. get a better browser. */
 }
 
 main {
-    margin: var(--content-margin);
+    margin: var(--misc_contentMargin);
 }
 
 .title {
