@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (!DEV_HOSTS.has(location.hostname)) return; // for prod
 
   const badge = document.createElement('div');
-  badge.textContent = 'DEVELOPER PREVIEW';
+  badge.textContent = 'EVERYTHING IS BROKEN IM SO SORRY - turtledevv';
   badge.setAttribute('aria-hidden', 'true');
   badge.style.position = 'fixed';
   badge.style.left = '10px';
@@ -64,10 +64,9 @@ window.addEventListener('DOMContentLoaded', () => {
   badge.style.letterSpacing = '0.06em';
   badge.style.borderRadius = '6px';
   badge.style.background = 'rgba(0,0,0,0.05)'; // semi-transparent
-  badge.style.color = 'rgba(0, 0, 0, 0.3)';
+  badge.style.color = 'rgba(0, 0, 0, 0.49)';
   badge.style.backdropFilter = 'saturate(120%) blur(4px)';
   badge.style.boxShadow = '0 6px 18px rgba(0,0,0,0.35)';
-  badge.style.textTransform = 'uppercase';
   badge.style.transform = 'translateZ(0)';
 
   badge.style.transition = 'opacity 200ms ease, transform 200ms ease';
