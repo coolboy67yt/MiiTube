@@ -52,8 +52,8 @@ body.viewer img {
     border-radius: 0px;
     border: none;
     position: fixed;
-    background: var(--manual-back-button);
-    background-size: var(--manual-back-button-size);
+    background: var(--manual_backButton);
+    background-size: var(--manual_backButtonSize);
     background-repeat: no-repeat;
     background-position: center;
     bottom: 0;
