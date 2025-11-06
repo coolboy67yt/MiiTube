@@ -8,7 +8,9 @@
 MiiTube is a platform that collects all the videos and YouTube channels related<br>
 to Miis, the Wii, Wii U, 3DS, and more.<br><br>
 
-> Visit the page now! > [link](https://miitube.vercel.app)
+### Links
+> Visit the page now! > [link](https://miitube.vercel.app)<br>
+> Join our discord! > [link](https://discord.gg/kKQfyvrheU)
 <br>
 Credits are in page 4 of the Manual https://miitube.vercel.app/manual/view.html?page=4
 
