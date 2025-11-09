@@ -1,5 +1,6 @@
 @import url("root.css");
 @import url("tooltip.css");
+@import url("buttons.css");
 
 /* general */
 
@@ -104,4 +105,124 @@ main {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+
+
+
+/* Developer stuffs */
+
+#devbadge {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  margin: 4px;
+  z-index: 6942067;
+  pointer-events: auto;
+  user-select: none;
+  padding: 6px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px) saturate(150%);
+  color: rgba(0, 0, 0, 0.49);
+  backdrop-filter: saturate(120%) blur(4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translateZ(0);
+  opacity: 0.95;
+  cursor: pointer;
+}
+
+
+#devmenu {
+  position: fixed;
+  left: 10px;
+  bottom: 60px;
+  width: fit-content;
+  min-width: 240px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px) saturate(150%);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  color: #222;
+  z-index: 696721;
+  display: none;
+  flex-direction: column;
+}
+
+#devmenu.show { display: flex; }
+
+#devmenu header {
+  font-family: "Wii Sans", var(--text_defaultFont);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#devmenu header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+#devmenu .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  padding: 8px;
+  gap: 6px;
+}
+
+#devmenu .buttons button {
+  display: flex !important;
+  cursor: pointer;
+}
+
+#devmenu .force-theme {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#devmenu .force-theme label {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+#devmenu .force-theme .input-row {
+  display: flex;
+  gap: 6px;
+}
+
+#devmenu .force-theme input {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+  outline: none;
+  background: rgba(255,255,255,0.7);
+  transition: border 0.15s ease;
+}
+
+#devmenu .force-theme input:focus {
+  border-color: rgba(0,0,0,0.3);
+}
+
+#devmenu .force-theme button {
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 600;
 }

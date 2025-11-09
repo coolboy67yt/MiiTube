@@ -18,7 +18,7 @@
 
 .button span {
     font-family: var(--text_symbolsFont);
-    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #0000004b;
+    text-shadow: var(--button_iconShadow);
     font-size: large;
 }
 
