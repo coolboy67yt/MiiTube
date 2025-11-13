@@ -5,7 +5,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+
+        <script src="/assets/js/navbar.js" defer></script>
+        <link rel="stylesheet" href="/assets/css/buttons.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
         <style>
             /* config */
             :root {
@@ -51,7 +54,7 @@
                 to { background-position-x: 1000%; }
             }
 
-            div {
+            div.glass {
                 position: relative;
                 width: 300px;
                 padding: 40px;
@@ -74,8 +77,11 @@
                 Test content. This is a glass thing!<br>
                 the background is scrolling so you can better see the glass effect
             </p><br>
+            <button class="button green" onclick="alert('Yeah!')"><span>E</span>Yeah!</button><br>
             <img class="example" src="https://dev-miitube.vercel.app/assets/img/users/Turtledevv.jpg"><br>
             <span style="font-size: x-small; color: rgb(224, 224, 224);">made by turtledevv 🐢</span>
         </div>
+
+        <script type="module" src="/assets/js/main.js"></script>
     </body>
 </html>

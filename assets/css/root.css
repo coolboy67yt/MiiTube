@@ -117,7 +117,7 @@
     --text_symbolsFont: 'Miiverse Symbols';
 
     --defaultDiv_bg: linear-gradient(130deg,rgb(208, 255, 206) 0%, rgb(234, 255, 224) 100%);
-    --defaultDiv_textColor: var(--text_color)
+    --defaultDiv_textColor: var(--text_color);
     --defaultDiv_border: var(--misc_accentColor);
     --defaultDiv_filter: none;
     --defaultDiv_shadow: none;
@@ -180,7 +180,7 @@
     --text_symbolsFont: 'Miiverse Symbols';
 
     --defaultDiv_bg: none;
-    --defaultDiv_textColor: var(--text_color)
+    --defaultDiv_textColor: var(--text_color);
     --defaultDiv_border: var(--misc_accentColor);
     --defaultDiv_filter: blur(10px) saturate(150%) contrast(120%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -193,7 +193,7 @@
     --bg_size: auto;
     --bg_pos: center;
 
-    --button_bg: linear-gradient(180deg,rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 70%, rgba(182, 208, 233, 0.5) 100%);
+    --button_bg: linear-gradient(180deg,rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(235, 236, 252, 0.7) 90%, rgba(202, 229, 253, 0.8) 100%);
     --button_txtColor: rgb(41, 41, 41);
     --button_border: 1px solid rgba(255, 255, 255, 0.945);
     --button_fontWeight: normal;
@@ -261,8 +261,4 @@
   src: url("/assets/font/WiiSans-Regular-4.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-}
-
-input, textarea, select, option {
-  font: inherit;
 }

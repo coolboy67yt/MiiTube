@@ -9,6 +9,10 @@ html,body {
     padding: 0;
 }
 
+input, textarea, select, option {
+  font: inherit;
+}
+
 a:link {
   color: var(--text_link);
 }
