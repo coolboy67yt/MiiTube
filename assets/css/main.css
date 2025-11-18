@@ -118,8 +118,7 @@ main {
 
 #devbadge {
   position: fixed;
-  left: 10px;
-  bottom: 10px;
+  inset: var(--dev_buttonPos);
   margin: 4px;
   z-index: 6942067;
   pointer-events: auto;
@@ -142,8 +141,7 @@ main {
 
 #devmenu {
   position: fixed;
-  left: 10px;
-  bottom: 60px;
+  inset: var(--dev_menuPos);
   width: fit-content;
   min-width: 240px;
   max-width: 500px;

@@ -1,5 +1,5 @@
 @import url("root.css");
-/*note to self: redo this later :}*/
+
 .title {
     display: flex;
     align-items: center;
@@ -26,10 +26,10 @@
 
     margin: 0 auto;
 }
-
 .profile-card {
     z-index: 4;
     display: flex;
+    position: relative;
     gap: 18px;
     backdrop-filter: var(--users_cardFilters);
     background: var(--users_cardBg);

@@ -15,6 +15,19 @@
     Use your eyes.
 */
 
+:root[data-theme="wii"] {
+    --misc_contentMargin: 10px 10px 80px 10px;
+    --nav_logoDisplay: none;
+    --nav_height: auto;
+    --nav_position: auto auto 0 auto;
+    --nav_background: url("/assets/img/wii.png");
+    --nav_iconBg: none;
+    --misc_accentColor: none;
+
+    --dev_menuPos: auto auto 120px 10px;
+    --dev_buttonPos: auto auto 70px 10px;
+}
+
 :root[data-theme="touchsomegrass"] {
     --text_defaultFont: 'Comic Sans MS', sans-serif;
     --bg_src: url("/assets/img/grass.png") repeat;
@@ -170,6 +183,9 @@
 }
 
 :root {
+    --dev_menuPos: auto auto 60px 10px;
+    --dev_buttonPos: auto auto 10px 10px;
+
     --misc_accentColor: #2ed1e7;
     --misc_contentMargin: 80px 10px 10px 10px;
 
@@ -182,7 +198,7 @@
     --defaultDiv_bg: none;
     --defaultDiv_textColor: var(--text_color);
     --defaultDiv_border: var(--misc_accentColor);
-    --defaultDiv_filter: blur(10px) saturate(150%) contrast(120%);
+    --defaultDiv_filter: brightness(90%) blur(10px) saturate(120%) contrast(120%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
