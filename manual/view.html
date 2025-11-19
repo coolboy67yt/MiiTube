@@ -33,6 +33,25 @@
     document.getElementById("return-btn").addEventListener("click", () => {
       history.back();
     });
+
+    if (`${encodeURIComponent(page)}` === `4`) {
+      const su = '/secret/34.html'; const ssq = '343434';
+
+      let bfr = '';
+      document.addEventListener('keydown', function(e) {
+          const el = document.activeElement;
+          if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+          const k = e.key;
+          if (!k || k.length !== 1) return;
+
+          bfr += k.toLowerCase();
+          if (bfr.length > ssq.length) bfr = bfr.slice(-ssq.length);
+
+          if (bfr === ssq) {
+              window.location.href = su;
+          }
+      });
+    };
   </script>
 
   <script type="module" src="/assets/js/main.js"></script>
