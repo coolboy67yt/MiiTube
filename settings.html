@@ -10,7 +10,14 @@
 
         <!-- CSS imports -->
         <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="stylesheet" href="/assets/css/miibtn.css">
+        <style>
+        .disabled {
+            opacity: 0.5;
+            /*pointer-events: none;*/
+            cursor: not-allowed;
+        }
+        </style>
+
 
     </head>
     <body>
@@ -22,32 +29,29 @@
             <div>
                 <h3>Theme</h3>
                 <div id="theme-buttons" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; max-width: 400px; margin-left: 10px;">
-                    <button class="button theme-btn" data-theme="classic">
-                        <img src="/assets/img/placeholder.png" alt="Classic" width="24"> Classic
-                    </button>
                     <button class="button theme-btn" data-theme="default">
                         <img src="/assets/img/favicon.png" alt="Default" width="24"> Default
                     </button>
-                    <button class="button theme-btn" data-theme="wiiu">
+                    <button class="button theme-btn" data-theme="classic">
+                        <img src="/assets/img/placeholder.png" alt="Classic" width="24"> Classic
+                    </button>
+                    <button class="button theme-btn disabled" data-theme="wiiu">
                         <img src="/assets/img/svg/wiiU.svg" alt="Wii U" width="24"> Wii U
                     </button>
-                    <button class="button theme-btn" data-theme="wii">
+                    <button class="button theme-btn disabled" data-theme="wii">
                         <img src="/assets/img/svg/wii.svg" alt="Wii" width="24"> Wii
                     </button>
-                    <button class="button theme-btn" data-theme="3ds">
+                    <button class="button theme-btn disabled" data-theme="3ds">
                         <img src="/assets/img/svg/3ds.svg" alt="3DS" width="24"> 3DS
                     </button>
-                    <button class="button theme-btn" data-theme="ns2">
+                    <button class="button theme-btn disabled" data-theme="ns2">
                         <img src="/assets/img/svg/switch.svg" alt="Switch 2" width="24"> NS2
                     </button>
-                    <button class="button theme-btn" data-theme="tv">
+                    <button class="button theme-btn disabled" data-theme="tv">
                         <img src="/assets/img/icons/tvii.png" alt="TV" width="24"> TV
                     </button>
                     <button class="button theme-btn" data-theme="vista">
                         <img src="/assets/img/icons/mediaplayer.ico" alt="Vista" width="24"> Vista
-                    </button>
-                    <button class="button theme-btn" data-theme="touchsomegrass">
-                        <img src="/assets/img/grass.png" alt="Grass" width="24" style="border-radius: 40%"> TouchSomeGrass (secret!)
                     </button>
                 </div>
             </div>

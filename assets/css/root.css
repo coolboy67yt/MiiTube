@@ -151,7 +151,9 @@
     --users_tagColor: #777;
     --users_descColor: rgb(85, 85, 85);
 
-    --videobox-bg: #ffffff9d;
+    --videoBox_bg: #ffffff9d;
+    --videoBox_filter: none;
+    --videoBox_shadow: none;
 
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
     --bg_anim: drift 60s linear infinite;
@@ -207,6 +209,10 @@
     --defaultDiv_filter: brightness(90%) blur(10px) saturate(120%) contrast(120%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
+    --videoBox_bg: var(--defaultDiv_bg);
+    --videoBox_filter: var(--defaultDiv_filter);
+    --videoBox_shadow: var(--defaultDiv_shadow);
+
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
     --bg_anim: drift 60s linear infinite;
     --bg_rept: repeat;
@@ -241,7 +247,6 @@
     --navIcon_news: url("/assets/img/icons/daily_log.png");
     --navIcon_manual: url("/assets/img/icons/health_and_safety.png");
     --navIcon_settings: url("/assets/img/icons/system_settings.png");
-    --videobox-bg: #ffffff9d;
 
     --manual_backButton: url("/assets/img/ui/wiiu/black-return.png");
     --manual_backButtonSize: 100%;

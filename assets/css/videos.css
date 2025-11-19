@@ -7,8 +7,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--videobox-bg);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  background: var(--videoBox_bg);
+  backdrop-filter: var(--videoBox_filter);
+  box-shadow: var(--videoBox_shadow);
   overflow: hidden;
   text-align: center;
   padding-bottom: 8px;
