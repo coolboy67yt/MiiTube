@@ -69,7 +69,7 @@
     --defaultDiv_bg: rgba(255, 255, 255, 0.18);
     --defaultDiv_textColor: var(--text_color);
     --defaultDiv_border: var(--misc_accentColor);
-    --defaultDiv_filter: blur(10px) saturate(180%) contrast(120%);
+    --defaultDiv_filter: blur(10px) saturate(150%) contrast(120%) brightness(85%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     --text_color: rgb(255, 255, 255);
@@ -116,7 +116,7 @@
     --misc_contentMargin: 60px 5px 5px 5px;
 
     --users_cardBg: var(--defaultDiv_bg);
-    --users_nameColor: rgb(55, 129, 80);
+    --users_nameColor: rgb(229, 255, 237);
     --users_tagColor: rgb(226, 226, 226);
     --users_descColor: rgb(236, 236, 236);
 
