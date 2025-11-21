@@ -4,8 +4,20 @@ main,
 .manual-page {
     max-width: 720px;
     margin: 0 auto;
-    padding: 0 16px
+    padding: 0 16px;
+    text-align: center;
 }
+
+/*
+    JANKY JANK JANK JANK!!!!
+    JANK!!!!! STUPID!!!!!
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!
+    FIND A BETTER WAY TO DO THIS LATER.
+*/
+main {
+    margin-top: 60px;
+}
+/* jank warning end */
 
 .manual-page {
     padding-bottom: 50px;
@@ -24,7 +36,7 @@ main,
     gap: 0px;
 }
 
-.intro > * {
+.intro * {
     margin: 0;
 }
 
