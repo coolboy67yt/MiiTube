@@ -44,7 +44,7 @@
   object-position: center;
   border-radius: var(--videoBoxThumb_borderRadius);
   display: block;
-  transform: scale(1.05);
+  transform: scale(1.01);
 
   mask-image: var(--videoBoxThumb_mask);
   mask-size: var(--videoBoxThumb_maskSize);
