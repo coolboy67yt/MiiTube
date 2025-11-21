@@ -27,6 +27,7 @@
     --dev_menuPos: auto auto 120px 10px;
     --dev_buttonPos: auto auto 70px 10px;
 
+    --videoBoxThumb_aspectRatio: 16 / 10;
     --videoBoxThumb_mask: url("/assets/img/wiimask.png");
     --videoBoxThumb_maskSize: 100% 100%;
     --videoBoxThumb_maskRept: no-repeat;
