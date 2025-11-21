@@ -33,11 +33,16 @@
 
 .cover {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--videoBoxThumb_aspectRatio);
   object-fit: cover;
   object-position: center;
-  border-radius: 7px 7px 0 0;
+  border-radius: var(--videoBoxThumb_borderRadius);
   display: block;
+
+  mask-image: var(--videoBoxThumb_mask);
+  mask-size: var(--videoBoxThumb_maskSize);
+  mask-repeat: var(--videoBoxThumb_maskRept);
+  mask-mode: var(--videoBoxThumb_maskMode);
 }
 
 #videos {
@@ -79,5 +84,5 @@
 #sort-controls select:focus {
     outline: none;
     border-color: #666;
-    box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.3); /* subtle highlight */
+    box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.3);
 }

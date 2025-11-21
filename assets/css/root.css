@@ -26,6 +26,15 @@
 
     --dev_menuPos: auto auto 120px 10px;
     --dev_buttonPos: auto auto 70px 10px;
+
+    --videoBoxThumb_mask: url("/assets/img/wiimask.png");
+    --videoBoxThumb_maskSize: 100% 100%;
+    --videoBoxThumb_maskRept: no-repeat;
+    --videoBoxThumb_maskMode: luminance;
+
+    --videoBox_bg: none;
+    --videoBox_filter: none;
+    --videoBox_shadow: none;
 }
 
 :root[data-theme="touchsomegrass"] {
@@ -212,6 +221,14 @@
     --videoBox_bg: var(--defaultDiv_bg);
     --videoBox_filter: var(--defaultDiv_filter);
     --videoBox_shadow: var(--defaultDiv_shadow);
+
+    --videoBoxThumb_borderRadius: 7px 7px 0 0;
+    --videoBoxThumb_aspectRatio: 16 / 9;
+
+    --videoBoxThumb_mask: none;
+    --videoBoxThumb_maskSize: 100% 100%;
+    --videoBoxThumb_maskRept: no-repeat;
+    --videoBoxThumb_maskMode: none;
 
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
     --bg_anim: drift 60s linear infinite;
