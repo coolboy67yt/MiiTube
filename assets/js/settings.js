@@ -1,5 +1,6 @@
 import { setTheme, applyTheme } from '/assets/js/theme.js';
 import { getCookie, setCookie } from '/assets/js/utils.js';
+import { setVolume, getVolume } from '/assets/js/bgMusic.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.theme-btn');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bgSlider.addEventListener('input', () => {
         setCookie('bgVolume', bgSlider.value, 365);
+        setVolume(bgSlider.value / 100);
     });
 
     if (savedSfx !== null && savedSfx !== "") { sfxSlider.value = savedSfx; }

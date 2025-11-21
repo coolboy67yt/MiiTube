@@ -78,7 +78,7 @@ export function initDevTools() {
   const DEV_HOSTS = new Set(['localhost', 'dev-miitube.vercel.app', '127.0.0.1']);
   if (!DEV_HOSTS.has(location.hostname)) return;
 
-  console.log("hiya dev!");
+  console.log("developer mode has been enabled");
 
   const menu = createDevMenu();
   createDevBadge(menu);
