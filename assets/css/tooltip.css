@@ -6,12 +6,12 @@
     display: inline-block;
 }
 
+/* the actual bubble */
 .tooltip::after {
-    left: 50%;
     font-family: var(--tooltip_font);
     content: attr(data-tooltip);
     position: absolute;
-    top: calc(100% + var(--tooltip_offset));
+    inset: var(--tooltip_pos);
     transform: translateX(-50%) scale(0.97);
     background: var(--tooltip_bg);
     color: var(--tooltip_color);
@@ -25,6 +25,7 @@
     z-index: 20;
 }
 
+/* arrow sht */
 .tooltip::before {
     left: 50%;
     content: '';
@@ -42,7 +43,7 @@
 }
 
 .tooltip:hover::after, .tooltip:hover::before {
-    opacity: 1;
+    opacity: var(--tooltip_arrowOpacity);
     transform: translateX(-50%) scale(1);
 }
 

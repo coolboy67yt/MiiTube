@@ -73,6 +73,10 @@
     --bg_pos: right center;
     --bg_blur: 10px;
     --text_color: white;
+
+    /* weird and buggy but who cares at this point */
+    --tooltip_arrowSize: 0px;
+    --tooltip_pos: 0 auto auto 235%;
 }
 
 :root[data-theme="vista"] {
@@ -296,6 +300,7 @@
     --tooltip_offset: 10px;
     --tooltip_arrowSize: 7px;
     --tooltip_font: var(--text_defaultFont);
+    --tooltip_pos: calc(100% + var(--tooltip_offset)) auto auto 50%;
 }
 
 @font-face {
