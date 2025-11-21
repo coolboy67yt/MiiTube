@@ -238,7 +238,7 @@
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
     --bg_anim: drift 60s linear infinite;
     --bg_rept: repeat;
-    --bg_blur: 4px;
+    --bg_blur: 100px;
     --bg_atchmnt: scroll;
     --bg_size: auto;
     --bg_pos: center;

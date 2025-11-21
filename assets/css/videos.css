@@ -44,11 +44,17 @@
   object-position: center;
   border-radius: var(--videoBoxThumb_borderRadius);
   display: block;
+  transform: scale(1.05);
 
   mask-image: var(--videoBoxThumb_mask);
   mask-size: var(--videoBoxThumb_maskSize);
   mask-repeat: var(--videoBoxThumb_maskRept);
   mask-mode: var(--videoBoxThumb_maskMode);
+}
+
+.cover-container {
+    aspect-ratio: var(--videoBoxThumb_aspectRatio);
+    overflow: hidden;
 }
 
 #videos {

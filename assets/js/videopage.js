@@ -64,6 +64,7 @@ function createVideoBox(video) {
     box.className = "video-box";
 
     const link = document.createElement("a");
+    link.className = "cover-container"
     link.href = `/watch.html?id=${originalIndex}`;
 
     const img = document.createElement("img");
