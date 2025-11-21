@@ -62,36 +62,6 @@
             </div>
         </main>
         <script type="module" src="/assets/js/main.js"></script>
-        <script type="module">
-            import { getCookie, setTheme, setCookie, applyTheme } from '/assets/js/theme.js';
-
-            document.addEventListener('DOMContentLoaded', () => {
-                const buttons = document.querySelectorAll('.theme-btn');
-
-                const currentTheme = getCookie('theme');
-                buttons.forEach(btn => {
-                    if(btn.dataset.theme === currentTheme) {
-                        btn.style.border = '2px solid var(--accent-color)';
-                        btn.style.fontWeight = 'bold';
-                    }
-                });
-
-                buttons.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        setTheme(btn.dataset.theme);
-
-                        // Remove styling from all buttons
-                        buttons.forEach(b => {
-                            b.style.border = '';
-                            b.style.fontWeight = '';
-                        });
-
-                        // Add styling to the clicked button
-                        btn.style.border = '2px solid var(--misc_accentColor)';
-                        btn.style.fontWeight = 'bold';
-                    });
-                });
-            });
-        </script>
+        <script type="module" src="/assets/js/settings.js"></script>
     </body>
 </html>
