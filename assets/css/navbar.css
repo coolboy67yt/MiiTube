@@ -67,8 +67,9 @@
 }
 
 .nav-btn {
-    width: 40px;
-    height: 40px;
+    filter: var(--nav_iconFilter);
+    width: var(--nav_iconSize);
+    height: var(--nav_iconSize);
     margin-bottom: 2px;
 }
 

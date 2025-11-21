@@ -76,7 +76,16 @@
 
     /* weird and buggy but who cares at this point */
     --tooltip_arrowSize: 0px;
-    --tooltip_pos: 0 auto auto 235%;
+    --tooltip_pos: 0 auto auto 280%;
+
+    --nav_iconFilter: invert(1);
+    --nav_iconSize: 30px;
+
+    --navIcon_videos: url("/assets/svg/vids.svg");
+    --navIcon_users: url("/assets/svg/users.svg");
+    --navIcon_manual: url("/assets/svg/manual.svg");
+    --navIcon_news: url("/assets/svg/news.svg");
+    --navIcon_settings: url("/assets/svg/wrench.svg");
 }
 
 :root[data-theme="vista"] {
@@ -267,6 +276,8 @@
 
     --nav_iconBg: linear-gradient(to bottom, #e3e3e3, #eeeeee);
     --nav_iconMargin: 10px;
+    --nav_iconFilter: none;
+    --nav_iconSize: 40px;
 
     --navIcon_videos: url("/assets/img/icons/tvii.png");
     --navIcon_users: url("/assets/img/icons/miiverse.png");
