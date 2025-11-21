@@ -84,11 +84,12 @@
 
     --text_color: rgb(255, 255, 255);
     --text_defaultFont: sans-serif;
-    --misc_accentColor: rgb(207, 207, 207);
+    --misc_accentColor: rgb(161, 161, 161);
 
     --nav_logo: url("/assets/img/ui/vista/win7icon.png");
 
-    --videobox-bg: #3131319d;
+    --videoBox_authorColor: #d3d3d3;
+    --videoBox_playlistColor: rgb(218, 218, 218);
 
     --nav_overlayColor: rgba(0, 0, 0, 0.1);
     --nav_background:
@@ -147,7 +148,7 @@
 
     --defaultDiv_bg: linear-gradient(130deg,rgb(208, 255, 206) 0%, rgb(234, 255, 224) 100%);
     --defaultDiv_textColor: var(--text_color);
-    --defaultDiv_border: var(--misc_accentColor);
+    --defaultDiv_border: 2px solid var(--misc_accentColor);
     --defaultDiv_filter: none;
     --defaultDiv_shadow: none;
 
@@ -222,6 +223,9 @@
     --videoBox_bg: var(--defaultDiv_bg);
     --videoBox_filter: var(--defaultDiv_filter);
     --videoBox_shadow: var(--defaultDiv_shadow);
+
+    --videoBox_authorColor: #797979;
+    --videoBox_playlistColor: rgb(65, 65, 65);
 
     --videoBoxThumb_borderRadius: 7px 7px 0 0;
     --videoBoxThumb_aspectRatio: 16 / 9;

@@ -7,11 +7,16 @@ main {
 
 #video-player {
     border-radius: 20px;
-    background: linear-gradient(to bottom, #50787b, #fff, #ebebeb, #b4e1e1);
+    /*background: linear-gradient(to bottom, #50787b, #fff, #ebebeb, #b4e1e1);
+    border: 3px solid #50787b;*/
+    background: var(--defaultDiv_bg);
+    border: var(--defaultDiv_border);
+    backdrop-filter: var(--defaultDiv_filter);
+    box-shadow: var(--defaultDiv_shadow);
+    color: var(--defaultDiv_textColor);
     width: fit-content;
     height: fit-content;
     margin-top: 80px;
-    border: 3px solid #50787b;
 }
 
 #maininfo {
@@ -38,16 +43,15 @@ main {
     border-radius: 50%;
     width: 50px;
     height: auto;
-    border: 2px solid black;
+    border: 2px solid var(--misc_accentColor);
 }
 
 #title {
-    color: black;
     font-size: large;
 }
 
 #author {
-    color: rgb(63, 63, 63);
+    color: var(--videoBox_authorColor);
     font-size: small;
 }
 

@@ -28,12 +28,12 @@
 
 .playlist-text {
     font-size: x-small;
-    color: rgb(65, 65, 65);
+    color: var(--videoBox_playlistColor);
 }
 
 .video-author {
     font-size: 0.9em;
-    color: #797979;
+    color: var(--videoBox_authorColor);
     margin-top: 4px;
 }
 
