@@ -47,3 +47,9 @@
 .button.purple span {
     color: rgb(155, 12, 250);
 }
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}

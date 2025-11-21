@@ -10,15 +10,6 @@
 
         <!-- CSS imports -->
         <link rel="stylesheet" href="/assets/css/main.css">
-        <style>
-        .disabled {
-            opacity: 0.5;
-            /*pointer-events: none;*/
-            cursor: not-allowed;
-        }
-        </style>
-
-
     </head>
     <body>
         <main>
@@ -55,6 +46,20 @@
                     </button>
                 </div>
             </div>
+            <div>
+                <h3>Music and SFX</h3>
+                <div id="sound-buttons" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; max-width: 400px; margin-left: 10px;">
+                    <div class="setting" style="width: 100%; margin-bottom: 20px;">
+                        <label>SFX Volume</label><br>
+                        <input type="range" id="sfx-slider" min="0" max="100" value="100">
+                    </div>
+
+                    <div class="setting" style="width: 100%; margin-bottom: 20px;">
+                        <label>Background Music Volume</label><br>
+                        <input type="range" id="bg-slider" min="0" max="100" value="100">
+                    </div>
+                </div>
+            </div>
         </main>
         <script type="module" src="/assets/js/main.js"></script>
         <script type="module">
@@ -82,7 +87,7 @@
                         });
 
                         // Add styling to the clicked button
-                        btn.style.border = '2px solid var(--accent-color)';
+                        btn.style.border = '2px solid var(--misc_accentColor)';
                         btn.style.fontWeight = 'bold';
                     });
                 });
