@@ -12,8 +12,14 @@
   box-shadow: var(--videoBox_shadow);
   overflow: hidden;
   text-align: center;
+  transition: transform 0.2s ease-in-out;
   padding-bottom: 8px;
 }
+
+.video-box:hover {
+    transform: scale(1.1);
+}
+
 
 .video-title {
     margin-top: 10px;

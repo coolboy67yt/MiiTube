@@ -20,21 +20,6 @@
     align-items: center;
 }
 
-
-.navbar * span {
-    background: var(--nav_iconBg);
-    margin: var(--nav_iconMargin);
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 2px;
-}
-
-.navbar * span img {
-    width: auto;
-    height: 40px;
-}
-
 @media (max-width: 600px) {
     #logo-container {
         display: none !important;
@@ -84,6 +69,27 @@
     width: 40px;
     height: 40px;
     margin-bottom: 2px;
+}
+
+.icon-holder {
+    background: var(--nav_iconBg);
+    margin: var(--nav_iconMargin);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2px;
+
+    transition: 0.2s ease-in-out;
+}
+
+.icon-holder img {
+    width: auto;
+    height: 40px;
+}
+
+.icon-holder:hover {
+    transform: scale(1.1);
+    margin: var(--nav_iconMargin) calc(var(--nav_iconMargin) + 2px);
 }
 
 /* ..jank? jank. */
