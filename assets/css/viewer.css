@@ -16,6 +16,8 @@ main {
     color: var(--defaultDiv_textColor);
     width: fit-content;
     height: fit-content;
+    transform-origin: top;
+    transform: scale(var(--viewer_size));
     margin-top: 80px;
 }
 
@@ -32,7 +34,7 @@ main {
 #video-info {
     padding: 10px;
     padding-left: 15px;
-    color: white;
+    color: var(--defaultDiv_textColor);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -51,7 +53,7 @@ main {
 }
 
 #author {
-    color: var(--videoBox_authorColor);
+    color: var(--text_subColor);
     font-size: small;
 }
 

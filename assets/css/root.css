@@ -96,6 +96,8 @@
     --videoBox_width: 450px;
     --videoBox_playlistColor: rgb(218, 218, 218);
     --videoBox_titleSize: 1.2em;
+
+    --viewer_size: 2;
 }
 
 :root[data-theme="vista"] {
@@ -261,6 +263,8 @@
     --videoBoxThumb_maskSize: 100% 100%;
     --videoBoxThumb_maskRept: no-repeat;
     --videoBoxThumb_maskMode: none;
+
+    --viewer_size: 1;
 
     --bg_src: url("/assets/img/backgrounds/miiverse.png");
     --bg_anim: drift 60s linear infinite;
