@@ -24,12 +24,14 @@ main {
 
 .intro {
     margin-top: 10px;
-    background-color: #ffffff9d;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    background: var(--defaultDiv_bg);
+    box-shadow: var(--defaultDiv_shadow);
+    backdrop-filter: var(--defaultDiv_filter);
     width: fit-content;
     padding: 20px;
     border-radius: 7px;
-    border: 1px solid rgb(0, 255, 64);
+    border: var(--defaultDiv_border);
+    color: var(--defaultDiv_textColor);
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -43,6 +45,13 @@ main {
     margin-top: 20px;
     width: fit-content;
     font-size: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.article:hover {
+    transform: scale(1.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 

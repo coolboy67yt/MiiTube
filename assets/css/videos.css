@@ -1,7 +1,7 @@
 @import url("root.css");
 
 .video-box {
-  width: 200px;
+  width: var(--videoBox_width);
   height: auto;
   border-radius: 7px;
   display: flex;
@@ -24,15 +24,16 @@
 .video-title {
     margin-top: 10px;
     padding: 3px;
+    font-size: var(--videoBox_titleSize);
 }
 
 .playlist-text {
-    font-size: x-small;
+    font-size: var(--videoBox_playlistSize);
     color: var(--videoBox_playlistColor);
 }
 
 .video-author {
-    font-size: 0.9em;
+    font-size: var(--videoBox_authorSize);
     color: var(--videoBox_authorColor);
     margin-top: 4px;
 }

@@ -53,6 +53,11 @@
 }
 
 :root[data-theme="tv"] {
+    --text_color: white;
+    --text_subColor: rgb(219, 219, 219);
+    --text_link: rgb(148, 153, 230);
+    --text_linkVisited: rgb(191, 178, 238);
+
     --nav_logoDisplay: none;
     --nav_position: auto auto 0 0;
     --nav_iconMargin: 5px 0px;
@@ -88,18 +93,22 @@
     --navIcon_settings: url("/assets/svg/wrench.svg");
 
     --videoBox_authorColor: #d3d3d3;
+    --videoBox_width: 450px;
     --videoBox_playlistColor: rgb(218, 218, 218);
+    --videoBox_titleSize: 1.2em;
 }
 
 :root[data-theme="vista"] {
     --defaultDiv_bg: rgba(255, 255, 255, 0.18);
-    --defaultDiv_textColor: var(--text_color);
-    --defaultDiv_border: var(--misc_accentColor);
     --defaultDiv_filter: blur(10px) saturate(150%) contrast(120%) brightness(85%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     --text_color: rgb(255, 255, 255);
     --text_defaultFont: sans-serif;
+    --text_subColor: rgb(54, 54, 54);
+    --text_link: rgb(148, 153, 230);
+    --text_linkVisited: rgb(191, 178, 238);
+
     --misc_accentColor: rgb(161, 161, 161);
 
     --nav_logo: url("/assets/img/ui/vista/win7icon.png");
@@ -126,9 +135,6 @@
 
     --manual_backButton: url("/assets/img/ui/vista/return.png");
     --manual_backButtonSize: 65%;
-
-    --text_link: rgb(0, 17, 255);
-    --text_linkVisited: rgb(145, 119, 238);
 
     --loading_wheelIcon: url("/assets/img/ui/vista/loading.png");
 
@@ -225,6 +231,7 @@
     --misc_contentMargin: 80px 10px 10px 10px;
 
     --text_color: black;
+    --text_subColor: gray;
     --text_link: blue;
     --text_linkVisited: purple;
     --text_defaultFont: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
@@ -232,16 +239,20 @@
 
     --defaultDiv_bg: none;
     --defaultDiv_textColor: var(--text_color);
-    --defaultDiv_border: var(--misc_accentColor);
+    --defaultDiv_border: 1px solid var(--misc_accentColor);
     --defaultDiv_filter: brightness(90%) blur(10px) saturate(120%) contrast(120%);
     --defaultDiv_shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     --videoBox_bg: var(--defaultDiv_bg);
     --videoBox_filter: var(--defaultDiv_filter);
     --videoBox_shadow: var(--defaultDiv_shadow);
+    --videoBox_width: 200px;
 
+    --videoBox_titleSize: auto;
     --videoBox_authorColor: #797979;
+    --videoBox_authorSize: 0.9em;
     --videoBox_playlistColor: rgb(65, 65, 65);
+    --videoBox_playlistSize: x-small;
 
     --videoBoxThumb_borderRadius: 7px 7px 0 0;
     --videoBoxThumb_aspectRatio: 16 / 9;
