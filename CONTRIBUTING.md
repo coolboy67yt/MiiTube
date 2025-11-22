@@ -6,7 +6,7 @@
 ## 1. Getting Started
 This step is the most simple.
 
-1. **Fork** this repository.
+1. **Fork** the `dev` branch of this repo.
 2. **Create a new branch** for your changes in your fork.  
    Example: `fix/manualpg3fix`
 3. **Clone** your fork locally:
