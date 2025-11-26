@@ -58,6 +58,12 @@
     overflow: hidden;
 }
 
+.video-info {
+    display: flex;
+    flex-direction: var(--videoBox_infoDirection);
+    align-items: center;
+}
+
 #videos {
   display: flex;
   flex-wrap: wrap;

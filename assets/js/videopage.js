@@ -60,51 +60,42 @@ function getSortedVideos() {
 
 function createVideoBox(video) {
     const originalIndex = videos.indexOf(video) + 1;
-    const box = document.createElement("div");
-    box.className = "video-box";
 
-    const link = document.createElement("a");
-    link.className = "cover-container"
-    link.href = `/watch.html?id=${originalIndex}`;
+    // Determine author name
+    let user = users.find(u => u.username.substring(1) === video.author);
+    let authorName = user ? user.name : video.author;
 
-    const img = document.createElement("img");
-    img.src = getVideoThumbnail(video);
-    img.alt = "Thumbnail"
-    img.className = "cover";
-    link.appendChild(img);
+    // Playlist badge HTML
+    const playlistBadge = video.type === "playlist" 
+        ? `<br><span class="playlist-text">📂 Playlist</span>` 
+        : '';
 
-    box.appendChild(link);
+    // Dev mode extra info
+    const devInfo = devMode ? ` | ${originalIndex}` : '';
 
-    const titleDiv = document.createElement("div");
-    titleDiv.className = "video-title";
-    titleDiv.innerHTML = video.title;
+    // Full HTML
+    const html = `
+        <div class="video-box">
+            <a class="cover-container" href="/watch.html?id=${originalIndex}">
+                <img class="cover" src="${getVideoThumbnail(video)}" alt="Thumbnail">
+            </a>
+            <div class="video-info">
+                <div class="video-title">
+                    ${video.title}${playlistBadge}
+                </div>
+                <div class="video-author">
+                    by ${authorName}${devInfo}
+                </div>
+            </div>
+        </div>
+    `;
 
-    if (video.type === "playlist") {
-        const playlistSpan = document.createElement("span");
-        playlistSpan.className = "playlist-text";
-        playlistSpan.textContent = "📂 Playlist";
-        titleDiv.innerHTML += "<br>";
-        titleDiv.appendChild(playlistSpan);
-    }
-
-    const authorDiv = document.createElement("div");
-    authorDiv.className = "video-author";
-
-    // If a backend was added later, this would have to be altered to properly fetch the channel name in the backend
-    let user = users.find(u => u.username.substring(1) === video.author), authorName = video.author;
-    if (user) authorName = user.name;
-
-    if (devMode) {
-        authorDiv.textContent = `by ${authorName} | ${originalIndex}`;
-    } else {
-        authorDiv.textContent = `by ${authorName}`;
-    }
-
-    box.appendChild(titleDiv);
-    box.appendChild(authorDiv);
-
-    return box;
+    // Convert HTML string to DOM element
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
 }
+
 
 
 // render videos
