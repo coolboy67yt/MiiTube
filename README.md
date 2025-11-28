@@ -13,6 +13,11 @@
 
 ---
 
+> [!NOTE]  
+> This project is a fan-made, community-driven initiative and is **not affiliated with, endorsed by, or associated with Nintendo**, the Wii/Wii U/3DS platforms, Miis, or any related trademarks.
+
+---
+
 ## 🚀 Visit MiiTube
 👉 **Live website:** https://miitube.vercel.app  
 Explore channels, videos, and a nostalgic collection of all things Mii!
